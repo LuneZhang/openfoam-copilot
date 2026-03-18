@@ -1,0 +1,47 @@
+type: SourceRecord
+required:
+  - id
+  - title
+  - source_type
+  - source_name
+  - url
+  - trust_level
+  - tags
+  - summary
+properties:
+  id:
+    type: string
+    description: Stable unique source identifier.
+  title:
+    type: string
+  source_type:
+    type: enum
+    values: [official, tutorial, community]
+  source_name:
+    type: string
+    description: Site, guide, forum, repo, or publication name.
+  url:
+    type: string
+  date:
+    type: string
+    description: Publication/update date when known.
+  trust_level:
+    type: enum
+    values: [high, medium, low]
+  tags:
+    type: list[string]
+  solver_scope:
+    type: list[string]
+  physics_scope:
+    type: list[string]
+  summary:
+    type: string
+  key_points:
+    type: list[string]
+  applicability:
+    type: list[string]
+  caveats:
+    type: list[string]
+  extracted_from:
+    type: list[string]
+    description: IDs of upstream sources if this note is derived from multiple sources.

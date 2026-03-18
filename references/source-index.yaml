@@ -1,0 +1,418 @@
+sources:
+  - id: official-openfoam-user-guide-case-structure
+    title: OpenFOAM User Guide / standard case layout references
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/
+    trust_level: high
+    tags: [official, case-structure, setup]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Canonical official documentation family covering standard case organization around 0, constant, and system.
+
+  - id: official-openfoam-tutorial-conventions
+    title: OpenFOAM official tutorials as canonical structure examples
+    source_type: tutorial
+    source_name: OpenFOAM Tutorials
+    url: https://www.openfoam.com/documentation/tutorial-guide
+    trust_level: high
+    tags: [official, tutorials, case-structure]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official tutorials provide concrete folder and dictionary patterns for each solver family.
+
+  - id: official-openfoam-user-guide-controlDict
+    title: OpenFOAM User Guide / controlDict and run-time control
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/guides/latest/doc/guide-case-system-controldict.html
+    trust_level: high
+    tags: [official, controlDict, runtime]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official reference for application selection, time controls, write controls, and runtime behavior in controlDict.
+
+  - id: official-openfoam-function-objects
+    title: OpenFOAM function objects documentation
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/guides/latest/doc/guide-function-objects.html
+    trust_level: high
+    tags: [official, function-objects, monitoring]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official documentation for in-run diagnostics, sampling, residual monitoring, and derived outputs.
+
+  - id: official-openfoam-user-guide-fvSchemes
+    title: OpenFOAM User Guide / fvSchemes
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/guides/latest/doc/guide-case-system-fvschemes.html
+    trust_level: high
+    tags: [official, fvSchemes, numerics]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official reference for discretization schemes used by finite-volume operators.
+
+  - id: official-openfoam-user-guide-fvSolution
+    title: OpenFOAM User Guide / fvSolution
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/guides/latest/doc/guide-case-system-fvsolution.html
+    trust_level: high
+    tags: [official, fvSolution, numerics]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official reference for algebraic solver settings, relaxation factors, and pressure-velocity coupling controls.
+
+  - id: official-openfoam-user-guide-solver-selection
+    title: OpenFOAM User Guide / solver selection references
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/user-guide/a-reference/a.1-standard-solvers
+    trust_level: high
+    tags: [official, solvers, selection]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official solver catalog for mapping problem classes to standard OpenFOAM solver families.
+
+  - id: official-openfoam-tutorial-catalog
+    title: OpenFOAM tutorial catalog
+    source_type: tutorial
+    source_name: OpenFOAM Tutorials
+    url: https://www.openfoam.com/documentation/tutorial-guide
+    trust_level: high
+    tags: [official, tutorials, solvers]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official tutorial index useful for identifying representative cases by solver family and physics class.
+
+  - id: official-openfoam-user-guide-transport-properties
+    title: OpenFOAM User Guide / transportProperties references
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/
+    trust_level: high
+    tags: [official, transportProperties, setup]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official references for transport-model dictionaries and material transport property setup.
+
+  - id: official-openfoam-user-guide-turbulence-properties
+    title: OpenFOAM User Guide / turbulenceProperties references
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/
+    trust_level: high
+    tags: [official, turbulenceProperties, turbulence]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official references for laminar/RANS/LES mode selection and turbulence model activation.
+
+  - id: official-openfoam-user-guide-boundary-conditions
+    title: OpenFOAM boundary condition references
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/
+    trust_level: high
+    tags: [official, boundary-conditions, setup]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official references for boundary-condition semantics and usage.
+
+  - id: official-openfoam-docs-inletOutlet-backflow
+    title: OpenFOAM docs / inletOutlet and outlet-condition reverse-flow semantics
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://doc.openfoam.com/2212/tools/processing/boundary-conditions/rtm/derived/inletOutlet/inletOutlet/
+    trust_level: high
+    tags: [official, boundary-conditions, inletOutlet, backflow, outlet]
+    solver_scope: [general, incompressible, compressible, thermal]
+    physics_scope: [general, thermal, compressible]
+    summary: Official documentation family describing `inletOutlet` as zero-gradient on outflow and fixed-value on reverse flow, plus outlet-condition notes that pure outflow assumptions can be unstable under reverse flow.
+
+  - id: official-openfoam-field-file-format
+    title: OpenFOAM field file format references
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/
+    trust_level: high
+    tags: [official, field-files, boundary-conditions]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official references for field dictionaries and boundaryField structure.
+
+  - id: official-openfoam-user-guide-checkMesh
+    title: OpenFOAM checkMesh references
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/
+    trust_level: high
+    tags: [official, checkMesh, mesh]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official references for mesh validation workflow.
+
+  - id: official-openfoam-mesh-quality-guidance
+    title: OpenFOAM mesh quality guidance
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/
+    trust_level: high
+    tags: [official, mesh, quality]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official guidance relevant to mesh-quality interpretation.
+
+  - id: official-openfoam-user-guide-parallel
+    title: OpenFOAM parallel execution references
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/
+    trust_level: high
+    tags: [official, parallel, execution]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official references for parallel workflow and execution concepts.
+
+  - id: official-openfoam-decomposePar-guide
+    title: OpenFOAM decomposePar references
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/
+    trust_level: high
+    tags: [official, parallel, decomposePar]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official references for decomposition setup and execution.
+
+  - id: official-openfoam-thermophysical-properties
+    title: OpenFOAM thermophysicalProperties references
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/
+    trust_level: high
+    tags: [official, thermophysicalProperties, thermo]
+    solver_scope: [general]
+    physics_scope: [thermal, compressible, reacting]
+    summary: Official references for thermophysical package setup in thermal and compressible workflows.
+
+  - id: official-openfoam-hydrostatic-pressure-effects
+    title: OpenFOAM docs / hydrostatic pressure effects and modified-pressure boundary semantics
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/guides/latest/doc/guide-applications-solvers-variable-transform-p-rgh.html
+    trust_level: high
+    tags: [official, p_rgh, hydrostatic-pressure, buoyancy, boundary-conditions]
+    solver_scope: [buoyant, multiphase, compressible, thermal]
+    physics_scope: [buoyancy, thermal, compressible, multiphase]
+    summary: Official documentation family explaining that buoyant / hydrostatic-sensitive solvers solve for modified pressure (`p_rgh`) with hydrostatic contribution removed, so pressure anchoring and boundary treatment must match that formulation.
+
+  - id: official-openfoam-compressible-setup-guidance
+    title: OpenFOAM compressible setup guidance
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/
+    trust_level: high
+    tags: [official, compressible, thermo, setup]
+    solver_scope: [compressible]
+    physics_scope: [compressible, thermal]
+    summary: Official guidance relevant to compressible case framing and thermo-coupled setup.
+
+  - id: official-openfoam-turbulence-model-overview
+    title: OpenFOAM turbulence model overview
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/
+    trust_level: high
+    tags: [official, turbulence, models]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Official overview of turbulence model families and their intended use.
+
+  - id: official-cfd-direct-turbulence-wall-function-guidance
+    title: CFD Direct User Guide / turbulence wall-function pairing guidance
+    source_type: official
+    source_name: CFD Direct OpenFOAM User Guide
+    url: https://doc.cfd.direct/openfoam/user-guide-v13/turbulence
+    trust_level: high
+    tags: [official, turbulence, wall-functions, k-epsilon, k-omega, boundary-conditions]
+    solver_scope: [rans, incompressible, general]
+    physics_scope: [general]
+    summary: Official user-guide guidance stating which wall-function BC families should be applied to turbulence fields such as epsilon, omega, and k on wall patches.
+
+  - id: community-triage-policy-seed
+    title: Internal community-source triage policy seed
+    source_type: internal
+    source_name: openfoam-tutorial-for-agent
+    url: local://knowledge/community/source-triage-framework.md
+    trust_level: medium
+    tags: [community, triage, ingestion-policy]
+    solver_scope: [general]
+    physics_scope: [general]
+    summary: Internal policy seed used to normalize future community troubleshooting ingestion.
+
+  - id: community-simscale-kb-floating-point-exception
+    title: SimScale Knowledge Base / Floating Point Exception
+    source_type: community
+    source_name: SimScale Knowledge Base
+    url: https://www.simscale.com/knowledge-base/floating-point-exception/
+    trust_level: medium
+    tags: [community, troubleshooting, floating-point-exception, divergence]
+    solver_scope: [general, compressible, incompressible, multiphase]
+    physics_scope: [general, thermal, multiphase]
+    summary: Community/vendor knowledge-base article summarizing common floating-point-exception triggers and first-line remedies.
+
+  - id: community-simscale-docs-relaxation-factors
+    title: SimScale Docs / Relaxation Factors
+    source_type: community
+    source_name: SimScale Documentation
+    url: https://www.simscale.com/docs/simulation-setup/numerics/relaxation-factors/
+    trust_level: medium
+    tags: [community, numerics, relaxation-factors, convergence]
+    solver_scope: [steady-state, general]
+    physics_scope: [general]
+    summary: Community/vendor documentation describing under-relaxation as a bounded startup-stability tool.
+
+  - id: community-simscale-forum-floating-point-thread
+    title: SimScale Forum / Most Popular Errors of Simulation (floating point exception advice)
+    source_type: community
+    source_name: SimScale Forum
+    url: https://www.simscale.com/forum/t/most-popular-errors-of-simulation/92/3
+    trust_level: low
+    tags: [community, forum, floating-point-exception, heuristics]
+    solver_scope: [steady-state, general]
+    physics_scope: [general]
+    summary: Practitioner forum heuristics for floating-point-exception crashes, useful as low-confidence corroboration.
+
+  - id: community-simscale-kb-inconsistent-patch-patchfield
+    title: SimScale Knowledge Base / Inconsistent Patch and PatchField Types Found
+    source_type: community
+    source_name: SimScale Knowledge Base
+    url: https://www.simscale.com/knowledge-base/inconsistent-patch-and-patchfield-types-found/
+    trust_level: medium
+    tags: [community, boundary-conditions, patch-type, patchfield, mesh]
+    solver_scope: [general, incompressible, compressible, cht]
+    physics_scope: [general, thermal]
+    summary: Vendor KB note for structural BC/type mismatches between mesh patch classification and field-side boundary-condition type.
+
+  - id: community-simscale-kb-empty-2d-boundary
+    title: SimScale Knowledge Base / Incorrect Usage of Empty 2D Boundary Condition
+    source_type: community
+    source_name: SimScale Knowledge Base
+    url: https://www.simscale.com/knowledge-base/incorrect-usage-of-empty-2d-boundary-condition/
+    trust_level: medium
+    tags: [community, boundary-conditions, empty, 2d, pseudo-2d]
+    solver_scope: [general, incompressible, compressible, multiphase]
+    physics_scope: [general, multiphase, thermal]
+    summary: Vendor KB note explaining when `empty` is structurally valid and how pseudo-2D meshes must be configured.
+
+  - id: community-simscale-kb-divergence-localization
+    title: SimScale Knowledge Base / How to Locate Divergence in Simulation?
+    source_type: community
+    source_name: SimScale Knowledge Base
+    url: https://www.simscale.com/knowledge-base/divergence-simulation-knowledge-base/
+    trust_level: medium
+    tags: [community, troubleshooting, divergence, localization, mesh-quality, postprocessing]
+    solver_scope: [general, incompressible, compressible, thermal, multiphase]
+    physics_scope: [general, thermal, multiphase]
+    summary: Vendor KB note recommending localization of the first divergence hotspot before broad global numerics tuning.
+
+  - id: community-simscale-kb-continuity-error
+    title: SimScale Knowledge Base / Continuity Error Encountered Cannot be Removed
+    source_type: community
+    source_name: SimScale Knowledge Base
+    url: https://www.simscale.com/knowledge-base/continuity-error-encountered-cannot-be-removed/
+    trust_level: medium
+    tags: [community, troubleshooting, continuity, mass-balance, pressure-reference, boundary-conditions]
+    solver_scope: [general, incompressible, steady-state, transient]
+    physics_scope: [general]
+    summary: Vendor KB note framing non-removable continuity error as a BC-balance and pressure-anchoring problem rather than a generic numerics failure.
+
+  - id: community-simscale-docs-pressure-outlet-backflow
+    title: SimScale Docs / Pressure Inlet and Pressure Outlet (backflow semantics)
+    source_type: community
+    source_name: SimScale Documentation
+    url: https://www.simscale.com/docs/simulation-setup/boundary-conditions/pressure-inlet-and-pressure-outlet/
+    trust_level: medium
+    tags: [community, boundary-conditions, pressure-outlet, backflow, recirculation]
+    solver_scope: [general, incompressible, compressible, thermal]
+    physics_scope: [general, thermal, compressible]
+    summary: Vendor documentation explaining that outlet recirculation/backflow requires meaningful return-state treatment instead of assuming pure outflow.
+
+  - id: community-simscale-docs-modified-pressure-reference
+    title: SimScale Docs / Modified Pressure and Hydrostatic Reference Height
+    source_type: community
+    source_name: SimScale Documentation
+    url: https://www.simscale.com/docs/simulation-setup/boundary-conditions/pressure-inlet-and-pressure-outlet/
+    trust_level: medium
+    tags: [community, boundary-conditions, p_rgh, modified-pressure, hydrostatic-pressure, reference-height]
+    solver_scope: [buoyant, thermal, compressible, multiphase]
+    physics_scope: [buoyancy, thermal, compressible, multiphase]
+    summary: Vendor documentation explaining modified pressure (`p_rgh`) and the physical meaning of hydrostatic reference height in pressure boundary setup.
+
+  - id: community-simscale-docs-k-epsilon-guidance
+    title: SimScale Docs / k-epsilon guidance
+    source_type: community
+    source_name: SimScale Documentation
+    url: https://www.simscale.com/docs/simulation-setup/global-settings/k-epsilon/
+    trust_level: medium
+    tags: [community, turbulence, k-epsilon, wall-treatment, high-Re]
+    solver_scope: [rans, incompressible, external-aero, general]
+    physics_scope: [general]
+    summary: Vendor turbulence guidance describing k-epsilon as a practical high-Re baseline with weaker suitability for close-wall or strongly separated situations.
+
+  - id: community-simscale-docs-k-omega-sst-guidance
+    title: SimScale Docs / k-omega SST guidance
+    source_type: community
+    source_name: SimScale Documentation
+    url: https://www.simscale.com/docs/simulation-setup/global-settings/k-omega-sst/
+    trust_level: medium
+    tags: [community, turbulence, k-omega-sst, wall-treatment, free-stream-sensitivity]
+    solver_scope: [rans, incompressible, external-aero, general]
+    physics_scope: [general]
+    summary: Vendor turbulence guidance describing k-omega SST near-wall strength, free-stream blending, and sensitivity to turbulence quantities.
+
+  - id: community-simscale-docs-mesh-quality-visualization
+    title: SimScale Docs / Mesh Quality Visualization Tips
+    source_type: community
+    source_name: SimScale Documentation
+    url: https://www.simscale.com/docs/simulation-setup/meshing/mesh-quality/
+    trust_level: medium
+    tags: [community, mesh, mesh-quality, non-orthogonality, skewness, visualization]
+    solver_scope: [general, incompressible, compressible, thermal]
+    physics_scope: [general]
+    summary: Vendor mesh-quality guidance defining local quality measures such as non-orthogonality and skewness and supporting hotspot-focused inspection.
+
+  - id: community-simscale-docs-non-orthogonal-correctors
+    title: SimScale Docs / Non-Orthogonal Correctors
+    source_type: community
+    source_name: SimScale Documentation
+    url: https://www.simscale.com/docs/simulation-setup/numerics/non-orthogonal-correctors/
+    trust_level: medium
+    tags: [community, mesh, non-orthogonality, numerics, pressure-correction]
+    solver_scope: [general, incompressible, compressible, steady-state, transient]
+    physics_scope: [general]
+    summary: Vendor numerics guidance linking higher non-orthogonality to pressure-correction fragility and extra correction-loop needs.
+
+  - id: community-openfoam-bugtracker-coupled-patch-parallel-crash
+    title: OpenFOAM issue tracker / coupled patch crash in parallel
+    source_type: community
+    source_name: OpenFOAM Issue Tracking
+    url: https://develop.openfoam.com/Development/OpenFOAM-plus/-/issues/538
+    trust_level: low
+    tags: [community, parallel, decomposition, coupled-patch, processor-boundary]
+    solver_scope: [general, cht, multiphysics]
+    physics_scope: [general, thermal]
+    summary: Community issue report showing a case that remains stable until decomposition splits a sensitive coupled interface across processors.
+
+  - id: community-openfoam-bugtracker-cyclicami-single-sided-parallel-crash
+    title: OpenFOAM Issue Tracker / cyclicAMI crashes in parallel when a processor owns only one AMI side
+    source_type: community
+    source_name: OpenFOAM Issue Tracking
+    url: https://bugs.openfoam.org/view.php?id=1260
+    trust_level: low
+    tags: [community, parallel, cyclicAMI, AMI, decomposition, processor-boundary]
+    solver_scope: [general, incompressible, compressible, rotating-machinery]
+    physics_scope: [general, thermal]
+    summary: Historical issue report showing a serial-clean cyclicAMI case that becomes parallel-fragile when processor-level ownership of the AMI pair becomes single-sided.

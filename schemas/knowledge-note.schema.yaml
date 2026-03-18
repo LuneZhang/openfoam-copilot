@@ -1,0 +1,34 @@
+type: KnowledgeNote
+required:
+  - id
+  - title
+  - problem_class
+  - recommendation
+  - rationale
+  - source_refs
+  - confidence
+properties:
+  id:
+    type: string
+  title:
+    type: string
+  problem_class:
+    type: string
+    description: Setup, numerics, turbulence, mesh, BC, convergence, parallel, etc.
+  prerequisites:
+    type: list[string]
+  recommendation:
+    type: list[string]
+  rationale:
+    type: list[string]
+  source_refs:
+    type: list[string]
+  confidence:
+    type: enum
+    values: [high, medium, low]
+  applicability_limits:
+    type: list[string]
+  failure_modes:
+    type: list[string]
+  anti_patterns:
+    type: list[string]

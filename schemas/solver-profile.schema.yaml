@@ -1,0 +1,28 @@
+type: SolverProfile
+required:
+  - solver_name
+  - physics_type
+  - steady_or_transient
+  - common_use_cases
+  - setup_watchpoints
+properties:
+  solver_name:
+    type: string
+  physics_type:
+    type: list[string]
+  steady_or_transient:
+    type: enum
+    values: [steady, transient, both]
+  compressibility:
+    type: enum
+    values: [incompressible, compressible, both]
+  turbulence_support:
+    type: list[string]
+  common_use_cases:
+    type: list[string]
+  common_failure_modes:
+    type: list[string]
+  setup_watchpoints:
+    type: list[string]
+  source_refs:
+    type: list[string]

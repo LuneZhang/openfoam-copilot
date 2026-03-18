@@ -1,0 +1,266 @@
+citations:
+  - target: scenario_templates/incompressible-laminar-internal-flow.md
+    source_refs:
+      - official-openfoam-tutorial-conventions
+      - official-openfoam-tutorial-catalog
+      - official-openfoam-user-guide-case-structure
+      - official-openfoam-user-guide-controlDict
+      - official-openfoam-user-guide-fvSchemes
+      - official-openfoam-user-guide-fvSolution
+      - official-openfoam-user-guide-transport-properties
+
+  - target: scenario_templates/incompressible-rans-external-aerodynamics.md
+    source_refs:
+      - official-openfoam-tutorial-conventions
+      - official-openfoam-tutorial-catalog
+      - official-openfoam-user-guide-solver-selection
+      - official-openfoam-user-guide-fvSchemes
+      - official-openfoam-user-guide-fvSolution
+      - official-openfoam-user-guide-turbulence-properties
+      - official-openfoam-function-objects
+
+  - target: scenario_templates/buoyant-natural-convection-room-scale.md
+    source_refs:
+      - official-openfoam-tutorial-conventions
+      - official-openfoam-tutorial-catalog
+      - official-openfoam-user-guide-solver-selection
+      - official-openfoam-user-guide-controlDict
+      - official-openfoam-user-guide-fvSchemes
+      - official-openfoam-user-guide-fvSolution
+      - official-openfoam-user-guide-turbulence-properties
+
+  - target: ontology/troubleshooting-graph/nodes/floating-point-exception-startup.md
+    source_refs:
+      - community-simscale-kb-floating-point-exception
+      - community-simscale-forum-floating-point-thread
+      - official-openfoam-user-guide-fvSchemes
+      - official-openfoam-user-guide-fvSolution
+
+  - target: ontology/troubleshooting-graph/nodes/steady-state-divergence-overaggressive-numerics.md
+    source_refs:
+      - community-simscale-docs-relaxation-factors
+      - community-simscale-kb-floating-point-exception
+      - official-openfoam-user-guide-fvSchemes
+      - official-openfoam-user-guide-fvSolution
+
+
+  - target: ontology/troubleshooting-graph/nodes/p-vs-p_rgh-confusion.md
+    source_refs:
+      - official-openfoam-user-guide-solver-selection
+      - official-openfoam-thermophysical-properties
+      - official-openfoam-user-guide-controlDict
+
+  - target: ontology/troubleshooting-graph/nodes/buoyant-pressure-anchor-reference-mismatch.md
+    source_refs:
+      - official-openfoam-hydrostatic-pressure-effects
+      - community-simscale-docs-modified-pressure-reference
+      - official-openfoam-user-guide-boundary-conditions
+      - official-openfoam-user-guide-controlDict
+
+  - target: ontology/troubleshooting-graph/nodes/turbulence-field-startup-mismatch.md
+    source_refs:
+      - official-openfoam-user-guide-turbulence-properties
+      - official-openfoam-turbulence-model-overview
+      - official-openfoam-tutorial-catalog
+
+  - target: ontology/troubleshooting-graph/nodes/turbulence-field-family-patch-role-mismatch.md
+    source_refs:
+      - official-openfoam-user-guide-turbulence-properties
+      - official-openfoam-turbulence-model-overview
+      - official-cfd-direct-turbulence-wall-function-guidance
+      - community-simscale-docs-k-epsilon-guidance
+      - community-simscale-docs-k-omega-sst-guidance
+
+  - target: ontology/troubleshooting-graph/nodes/mesh-quality-driven-instability.md
+    source_refs:
+      - official-openfoam-user-guide-checkMesh
+      - official-openfoam-mesh-quality-guidance
+      - community-simscale-kb-floating-point-exception
+
+  - target: ontology/troubleshooting-graph/nodes/critical-region-local-mesh-hotspot.md
+    source_refs:
+      - official-openfoam-user-guide-checkMesh
+      - official-openfoam-mesh-quality-guidance
+      - community-simscale-docs-mesh-quality-visualization
+      - community-simscale-docs-non-orthogonal-correctors
+      - community-simscale-kb-divergence-localization
+
+  - target: ontology/troubleshooting-graph/nodes/parallel-only-failure.md
+    source_refs:
+      - official-openfoam-user-guide-parallel
+      - official-openfoam-decomposePar-guide
+      - community-openfoam-bugtracker-coupled-patch-parallel-crash
+      - community-openfoam-bugtracker-cyclicami-single-sided-parallel-crash
+      - community-triage-policy-seed
+
+  - target: ontology/troubleshooting-graph/nodes/processor-count-sensitive-parallel-failure.md
+    source_refs:
+      - official-openfoam-user-guide-parallel
+      - official-openfoam-decomposePar-guide
+      - community-openfoam-bugtracker-cyclicami-single-sided-parallel-crash
+      - community-openfoam-bugtracker-coupled-patch-parallel-crash
+
+  - target: ontology/troubleshooting-graph/nodes/processor-boundary-field-inconsistency.md
+    source_refs:
+      - official-openfoam-user-guide-parallel
+      - official-openfoam-decomposePar-guide
+      - community-openfoam-bugtracker-coupled-patch-parallel-crash
+      - community-openfoam-bugtracker-cyclicami-single-sided-parallel-crash
+
+  - target: ontology/troubleshooting-graph/nodes/compressible-steady-startup-too-brittle.md
+    source_refs:
+      - official-openfoam-user-guide-solver-selection
+      - official-openfoam-compressible-setup-guidance
+      - official-openfoam-user-guide-controlDict
+      - official-openfoam-user-guide-fvSchemes
+      - official-openfoam-user-guide-fvSolution
+      - community-simscale-docs-relaxation-factors
+      - community-simscale-kb-floating-point-exception
+
+  - target: ontology/troubleshooting-graph/nodes/multiphase-interface-initialization-mismatch.md
+    source_refs:
+      - official-openfoam-tutorial-conventions
+      - official-openfoam-tutorial-catalog
+      - official-openfoam-user-guide-solver-selection
+      - official-openfoam-hydrostatic-pressure-effects
+      - official-openfoam-field-file-format
+      - official-openfoam-user-guide-boundary-conditions
+
+  - target: ontology/troubleshooting-graph/nodes/reacting-startup-coupling-too-stiff.md
+    source_refs:
+      - official-openfoam-user-guide-solver-selection
+      - official-openfoam-thermophysical-properties
+      - official-openfoam-compressible-setup-guidance
+      - official-openfoam-user-guide-controlDict
+      - official-openfoam-user-guide-fvSchemes
+      - official-openfoam-user-guide-fvSolution
+      - community-simscale-docs-relaxation-factors
+      - community-simscale-kb-floating-point-exception
+
+  - target: ontology/troubleshooting-graph/nodes/decomposition-fragmented-hotspot-vs-interface-semantic-defect.md
+    source_refs:
+      - official-openfoam-user-guide-parallel
+      - official-openfoam-decomposePar-guide
+      - official-openfoam-user-guide-boundary-conditions
+      - official-openfoam-user-guide-checkMesh
+      - community-openfoam-bugtracker-coupled-patch-parallel-crash
+      - community-openfoam-bugtracker-cyclicami-single-sided-parallel-crash
+      - community-simscale-kb-divergence-localization
+
+  - target: knowledge/distilled/parallel-sensitive-interface-decomposition-rule.md
+    source_refs:
+      - community-openfoam-bugtracker-coupled-patch-parallel-crash
+      - community-openfoam-bugtracker-cyclicami-single-sided-parallel-crash
+      - official-openfoam-user-guide-parallel
+      - official-openfoam-decomposePar-guide
+
+  - target: knowledge/distilled/ami-single-sided-processor-coverage-rule.md
+    source_refs:
+      - community-openfoam-bugtracker-cyclicami-single-sided-parallel-crash
+      - official-openfoam-user-guide-parallel
+      - official-openfoam-decomposePar-guide
+
+  - target: ontology/troubleshooting-graph/nodes/patch-name-boundary-mismatch.md
+    source_refs:
+      - community-simscale-kb-inconsistent-patch-patchfield
+      - official-openfoam-user-guide-case-structure
+      - official-openfoam-field-file-format
+      - official-openfoam-user-guide-boundary-conditions
+
+  - target: ontology/troubleshooting-graph/nodes/outlet-backflow-role-confusion.md
+    source_refs:
+      - official-openfoam-docs-inletOutlet-backflow
+      - community-simscale-docs-pressure-outlet-backflow
+      - official-openfoam-user-guide-boundary-conditions
+      - official-openfoam-field-file-format
+
+  - target: ontology/troubleshooting-graph/nodes/illegal-empty-2d-boundary-usage.md
+    source_refs:
+      - community-simscale-kb-empty-2d-boundary
+      - community-simscale-kb-inconsistent-patch-patchfield
+      - official-openfoam-user-guide-boundary-conditions
+      - official-openfoam-field-file-format
+
+  - target: ontology/troubleshooting-graph/nodes/residual-plateau-fake-convergence.md
+    source_refs:
+      - official-openfoam-user-guide-fvSolution
+      - official-openfoam-function-objects
+      - community-simscale-docs-relaxation-factors
+
+  - target: ontology/troubleshooting-graph/nodes/continuity-error-growth.md
+    source_refs:
+      - official-openfoam-user-guide-fvSolution
+      - official-openfoam-user-guide-controlDict
+      - official-openfoam-user-guide-checkMesh
+
+  - target: ontology/troubleshooting-graph/nodes/unremovable-continuity-error-bc-balance.md
+    source_refs:
+      - community-simscale-kb-continuity-error
+      - official-openfoam-user-guide-boundary-conditions
+      - official-openfoam-user-guide-fvSolution
+      - official-openfoam-user-guide-controlDict
+
+  - target: ontology/troubleshooting-graph/nodes/wrong-solver-family-selection.md
+    source_refs:
+      - official-openfoam-user-guide-solver-selection
+      - official-openfoam-tutorial-catalog
+      - official-openfoam-tutorial-conventions
+
+  - target: ontology/troubleshooting-graph/nodes/thermo-chemistry-package-inconsistency.md
+    source_refs:
+      - official-openfoam-thermophysical-properties
+      - official-openfoam-compressible-setup-guidance
+      - official-openfoam-tutorial-catalog
+
+  - target: ontology/troubleshooting-graph/nodes/courant-driven-transient-instability.md
+    source_refs:
+      - official-openfoam-user-guide-controlDict
+      - official-openfoam-user-guide-fvSchemes
+      - community-simscale-kb-floating-point-exception
+
+  - target: ontology/troubleshooting-graph/nodes/localized-divergence-hotspot-triage.md
+    source_refs:
+      - community-simscale-kb-divergence-localization
+      - official-openfoam-user-guide-checkMesh
+      - official-openfoam-mesh-quality-guidance
+      - official-openfoam-user-guide-boundary-conditions
+
+  - target: knowledge/distilled/divergence-hotspot-localization-rule.md
+    source_refs:
+      - community-simscale-kb-divergence-localization
+      - official-openfoam-user-guide-checkMesh
+      - official-openfoam-user-guide-boundary-conditions
+      - official-openfoam-mesh-quality-guidance
+
+  - target: playbooks/debug-routing/scenario-to-node-routing-v1.md
+    source_refs:
+      - official-openfoam-tutorial-catalog
+      - official-openfoam-user-guide-solver-selection
+      - official-openfoam-user-guide-checkMesh
+      - official-openfoam-user-guide-controlDict
+
+  - target: playbooks/debug-routing/playbook-to-node-routing-v1.md
+    source_refs:
+      - official-openfoam-user-guide-fvSolution
+      - official-openfoam-user-guide-fvSchemes
+      - official-openfoam-user-guide-boundary-conditions
+      - official-openfoam-user-guide-checkMesh
+
+  - target: prompts/setup-assistant.md
+    source_refs:
+      - official-openfoam-user-guide-solver-selection
+      - official-openfoam-tutorial-conventions
+
+  - target: prompts/troubleshooting-assistant.md
+    source_refs:
+      - official-openfoam-user-guide-fvSolution
+      - official-openfoam-user-guide-checkMesh
+      - community-triage-policy-seed
+
+  - target: prompts/case-review.md
+    source_refs:
+      - official-openfoam-user-guide-case-structure
+      - official-openfoam-user-guide-boundary-conditions
+      - official-openfoam-user-guide-fvSchemes
+      - official-openfoam-user-guide-fvSolution
+

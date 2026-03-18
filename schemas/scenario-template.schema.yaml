@@ -1,0 +1,25 @@
+type: ScenarioTemplate
+required:
+  - scenario_name
+  - typical_solver_choices
+  - key_dictionaries
+  - debug_priority_order
+properties:
+  scenario_name:
+    type: string
+  typical_solver_choices:
+    type: list[string]
+  key_dictionaries:
+    type: list[string]
+  initialization_guidance:
+    type: list[string]
+  turbulence_guidance:
+    type: list[string]
+  mesh_guidance:
+    type: list[string]
+  stability_risks:
+    type: list[string]
+  debug_priority_order:
+    type: list[string]
+  source_refs:
+    type: list[string]
