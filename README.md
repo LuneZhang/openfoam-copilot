@@ -24,3 +24,19 @@ Primary objective:
 - support path-driven case auto-intake so agents can inspect a case directory directly
 - separate official guidance from community heuristics
 - provide reusable playbooks instead of loose notes
+
+## Installation for Coding Agents
+
+### Install the bridge skill
+
+1. Download `skills/openfoam-copilot.skill`
+2. Extract to your agent's skills directory
+3. Replace `__OPENFOAM_COPILOT_PROJECT_PATH__` with the actual path to this repository
+
+### Usage
+
+After installing the skill, your coding agent will:
+1. Automatically run `scripts/case_auto_intake.py` when given a case path
+2. Follow the troubleshooting routing defined in this repository
+3. Load appropriate scenario templates and troubleshooting nodes
+
