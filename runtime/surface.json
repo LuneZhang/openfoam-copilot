@@ -62,20 +62,10 @@
   "authoring_only": [
     ".git/**",
     ".github/**",
-    "AGENTS.md",
     "CONTRIBUTING.md",
-    "dist/**",
-    "knowledge/AGENTS.md",
-    "knowledge/community/source-records/AGENTS.md",
-    "ontology/troubleshooting-graph/nodes/AGENTS.md",
-    "playbooks/AGENTS.md",
-    "prompts/AGENTS.md",
-    "references/AGENTS.md",
-    "scenario_templates/AGENTS.md",
     "schemas/**"
   ],
   "project_state": [
-    ".sisyphus/**",
     "DETAILED_DESIGN_V2.md",
     "MASTER_PLAN.md",
     "NEXT_STAGE_STARTUP_CHECKLIST.md",

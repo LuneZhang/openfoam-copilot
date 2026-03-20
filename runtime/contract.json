@@ -60,7 +60,6 @@
     ],
     "default_usage_rule": "Start from the listed entrypoints, then follow repository reading order into authored Markdown and routing artifacts.",
     "excluded_from_default_runtime_dependencies": [
-      ".sisyphus/",
       "MASTER_PLAN.md",
       "DETAILED_DESIGN_V2.md",
       "NEXT_STAGE_STARTUP_CHECKLIST.md",
