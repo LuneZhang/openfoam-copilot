@@ -38,6 +38,7 @@ source_refs:
 - official-openfoam-user-guide-parallel
 - official-openfoam-decomposePar-guide
 - community-openfoam-bugtracker-coupled-patch-parallel-crash
+- community-openfoam-bugtracker-cyclicami-single-sided-parallel-crash
 - community-triage-policy-seed
 
 confidence: medium

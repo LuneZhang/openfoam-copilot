@@ -1,42 +1,52 @@
-# OpenFOAM Tutorial for Agent
+# OpenFOAM Copilot
 
-This project is a structured OpenFOAM knowledge base designed for agent reuse.
+This repository is a local-files-first OpenFOAM knowledge base for coding agents. It helps agents set up cases, review case structure, and troubleshoot divergence, crashes, or nonphysical results while keeping official guidance separate from bounded community heuristics.
 
-Current status: the troubleshooting-foundation pass and the first-pass scenario-expansion pass have both been closed out; the project has now entered validation-path planning for representative case-based routing checks.
+## Supported Integration Paths
 
-See:
-- `MASTER_PLAN.md`
-- `DETAILED_DESIGN_V2.md`
-- `TROUBLESHOOTING_ENTRY.md`
-- `PARALLEL_TRIAGE_DECISION_TREE.md`
-- `PHASE1_STAGE_GATE.md`
-- `NEXT_STAGE_STARTUP_CHECKLIST.md`
-- `SCENARIO_EXPANSION_PROGRESS.md`
-- `SCENARIO_EXPANSION_STAGE_GATE.md`
-- `VALIDATION_CASE_MATRIX.md`
-- `VALIDATION_WORKFLOW.md`
-- `CASE_AUTO_INTAKE_SPEC.md`
-- `CASE_TRIAGE_PLAYBOOK.md`
+### 1. Full repository locally (default)
 
-Primary objective:
-- help agents set up OpenFOAM cases correctly
-- help agents diagnose divergence, crashes, and nonphysical results
-- support path-driven case auto-intake so agents can inspect a case directory directly
-- separate official guidance from community heuristics
-- provide reusable playbooks instead of loose notes
+Use the full repository when the agent is working on the same machine as this checkout and can read the repo directly.
 
-## Installation for Coding Agents
+Start with:
+- `README.md`
+- `runtime/contract.json`
+- `runtime/generated/skill-bridge.md`
+- `runtime/generated/agent-entry.md`
+- `runtime/generated/troubleshooting-entry.md`
 
-### Install the bridge skill
+This is the default integration path because it keeps the full authored runtime surface available locally.
 
-1. Download `skills/openfoam-copilot.skill`
-2. Extract to your agent's skills directory
-3. Replace `__OPENFOAM_COPILOT_PROJECT_PATH__` with the actual path to this repository
+### 2. Minimal runtime bundle export
 
-### Usage
+Use the bundle export when a consumer only needs the portable runtime surface instead of the full repository.
 
-After installing the skill, your coding agent will:
-1. Automatically run `scripts/case_auto_intake.py` when given a case path
-2. Follow the troubleshooting routing defined in this repository
-3. Load appropriate scenario templates and troubleshooting nodes
+Export it from the repository root with:
 
+```bash
+python3 scripts/export_runtime_bundle.py --out dist/openfoam-copilot-runtime
+```
+
+The exported bundle keeps repository-relative paths intact and includes the runtime contract, runtime surface definition, catalogs, generated runtime views, required authored runtime assets, source-traceability support, the optional auto-intake helper, and the skill bridge template. It excludes project-state material by default.
+
+After export, point the consumer at `dist/openfoam-copilot-runtime/` and use that directory as the local runtime root.
+
+## Skill Bridge Template
+
+Use `skills/openfoam-copilot/SKILL.md` as the thin bridge template for either the full repository or an exported runtime bundle. Replace `__OPENFOAM_COPILOT_PROJECT_PATH__` with the real local path to the chosen root.
+
+The primary readable bridge and routing surfaces are:
+- `runtime/generated/skill-bridge.md`
+- `runtime/generated/agent-entry.md`
+- `runtime/generated/troubleshooting-entry.md`
+- `runtime/generated/retrieval-order.md`
+
+## Optional Helper
+
+If local Python is available and a case path is available, the consumer may run:
+
+```bash
+python3 scripts/case_auto_intake.py <CASE_PATH> --format json
+```
+
+If the helper cannot run, fall back to the manual intake described by `CASE_AUTO_INTAKE_SPEC.md` and continue through `CASE_TRIAGE_PLAYBOOK.md` and `TROUBLESHOOTING_ENTRY.md`.

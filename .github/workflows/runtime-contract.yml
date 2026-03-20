@@ -1,0 +1,36 @@
+name: Runtime Contract
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  runtime-contract:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Validate runtime contract
+        run: python3 scripts/validate_contract.py --all
+
+      - name: Validate references
+        run: python3 scripts/validate_references.py --all
+
+      - name: Validate routing
+        run: python3 scripts/validate_routing.py --all
+
+      - name: Replay routing fixtures
+        run: python3 scripts/replay_routing_fixtures.py --all
+
+      - name: Check generated runtime views
+        run: python3 scripts/render_runtime_views.py --check
+
+      - name: Check auto-intake fixture contract
+        run: python3 scripts/case_auto_intake.py runtime/fixtures/cases/minimal-valid-case --format json > /tmp/openfoam-copilot-auto-intake.json && python3 -c "import json; from pathlib import Path; data=json.loads(Path('/tmp/openfoam-copilot-auto-intake.json').read_text()); contract=json.loads(Path('runtime/catalog/auto-intake.json').read_text()); assert all(key in data for key in contract['required_fields']); assert all(key in data['structure_inventory'] for key in contract['required_structure_inventory_fields'])"

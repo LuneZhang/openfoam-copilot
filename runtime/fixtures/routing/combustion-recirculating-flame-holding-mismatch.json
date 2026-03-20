@@ -1,0 +1,41 @@
+{
+  "fixture_schema_version": 1,
+  "fixture_kind": "routing_fixture_suite",
+  "suite": "combustion",
+  "description": "Recirculating combustor routing fixture.",
+  "cases": [
+    {
+      "id": "d4-recirculating-combustor-flame-holding-or-backflow-mismatch",
+      "suite": "combustion",
+      "matrix_ref": "D4",
+      "title": "Partially premixed recirculating combustor with unstable flame-holding or backflow framing",
+      "scenario_id": "partially-premixed-recirculating-combustor",
+      "playbook_id": "boundary-condition-design-v1",
+      "focus": "structural-setup",
+      "tags": [
+        "combustion",
+        "recirculating",
+        "boundary-conditions"
+      ],
+      "expectations": {
+        "primary_branch_top_n": 2,
+        "primary_branch_any_of": [
+          "recirculating-combustor-flame-holding-or-backflow-mismatch"
+        ],
+        "required_nodes_in_top_n": {
+          "top_n": 3,
+          "ids": [
+            "recirculating-combustor-flame-holding-or-backflow-mismatch",
+            "outlet-backflow-role-confusion"
+          ]
+        },
+        "avoid_nodes_in_top_n": {
+          "top_n": 2,
+          "ids": [
+            "reacting-startup-coupling-too-stiff"
+          ]
+        }
+      }
+    }
+  ]
+}

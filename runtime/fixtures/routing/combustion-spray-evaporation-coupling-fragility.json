@@ -1,0 +1,40 @@
+{
+  "fixture_schema_version": 1,
+  "fixture_kind": "routing_fixture_suite",
+  "suite": "combustion",
+  "description": "Spray combustion routing fixture.",
+  "cases": [
+    {
+      "id": "d5-spray-injection-evaporation-coupling-startup-fragility",
+      "suite": "combustion",
+      "matrix_ref": "D5",
+      "title": "Spray combustion destabilizes at injection onset",
+      "scenario_id": "spray-combustion",
+      "playbook_id": "divergence-recovery-v1",
+      "focus": "startup-stiffness",
+      "tags": [
+        "combustion",
+        "spray",
+        "startup"
+      ],
+      "expectations": {
+        "primary_branch_top_n": 2,
+        "primary_branch_any_of": [
+          "spray-injection-evaporation-coupling-startup-fragility"
+        ],
+        "required_nodes_in_top_n": {
+          "top_n": 3,
+          "ids": [
+            "spray-injection-evaporation-coupling-startup-fragility"
+          ]
+        },
+        "avoid_nodes_in_top_n": {
+          "top_n": 2,
+          "ids": [
+            "steady-state-divergence-overaggressive-numerics"
+          ]
+        }
+      }
+    }
+  ]
+}

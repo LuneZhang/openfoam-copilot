@@ -1,0 +1,35 @@
+{
+  "catalog_version": 1,
+  "catalog_kind": "prompts",
+  "path_style": "repository-relative",
+  "items": [
+    {
+      "id": "setup-assistant",
+      "aliases": [],
+      "path": "prompts/setup-assistant.md",
+      "status": "active",
+      "kind": "prompt"
+    },
+    {
+      "id": "troubleshooting-assistant",
+      "aliases": [],
+      "path": "prompts/troubleshooting-assistant.md",
+      "status": "active",
+      "kind": "prompt"
+    },
+    {
+      "id": "case-review",
+      "aliases": [],
+      "path": "prompts/case-review.md",
+      "status": "active",
+      "kind": "prompt"
+    },
+    {
+      "id": "source-triage-assistant",
+      "aliases": [],
+      "path": "prompts/source-triage-assistant.md",
+      "status": "active",
+      "kind": "prompt"
+    }
+  ]
+}

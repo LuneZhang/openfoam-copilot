@@ -15,9 +15,11 @@ Primary node handoff targets:
 - `steady-state-divergence-overaggressive-numerics`
 - `compressible-steady-startup-too-brittle`
 - `reacting-startup-coupling-too-stiff`
+- `premixed-ignition-or-flame-speed-model-mismatch`
 
 Reacting emphasis:
 - if thermo package, chemistry model, or species-field structure is unclear, stay in setup-level diagnosis before numerics tuning
+- if a narrow combustion family is already clear, prefer its family-specific node before falling back to the generic reacting branch
 
 Use when:
 - the case is new
@@ -34,6 +36,7 @@ Primary node handoff targets:
 - `compressible-steady-startup-too-brittle`
 - `multiphase-interface-initialization-mismatch`
 - `reacting-startup-coupling-too-stiff`
+- `spray-injection-evaporation-coupling-startup-fragility`
 - `outlet-backflow-role-confusion`
 - `parallel-only-failure`
 - `processor-count-sensitive-parallel-failure`
@@ -62,6 +65,9 @@ Primary node handoff targets:
 - `outlet-backflow-role-confusion`
 - `p-vs-p_rgh-confusion`
 - `buoyant-pressure-anchor-reference-mismatch`
+- `nonpremixed-mixture-fraction-or-stoichiometric-inlet-mismatch`
+- `firefoam-ventilation-radiation-or-hrr-coupling-mismatch`
+- `recirculating-combustor-flame-holding-or-backflow-mismatch`
 - `turbulence-field-startup-mismatch`
 - `turbulence-field-family-patch-role-mismatch`
 - `wrong-solver-family-selection`

@@ -1,0 +1,695 @@
+{
+  "catalog_version": 1,
+  "catalog_kind": "sources",
+  "path_style": "repository-relative",
+  "canonical_registry_path": "references/source-index.yaml",
+  "citation_audit_path": "references/citation-map.yaml",
+  "items": [
+    {
+      "id": "official-openfoam-user-guide-case-structure",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-user-guide-case-structure",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-tutorial-conventions",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-tutorial-conventions",
+      "status": "active",
+      "kind": "source",
+      "source_type": "tutorial",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-user-guide-controlDict",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-user-guide-controlDict",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "latest"
+      ]
+    },
+    {
+      "id": "official-openfoam-function-objects",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-function-objects",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "latest"
+      ]
+    },
+    {
+      "id": "official-openfoam-user-guide-fvSchemes",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-user-guide-fvSchemes",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "latest"
+      ]
+    },
+    {
+      "id": "official-openfoam-user-guide-fvSolution",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-user-guide-fvSolution",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "latest"
+      ]
+    },
+    {
+      "id": "official-openfoam-user-guide-solver-selection",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-user-guide-solver-selection",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-tutorial-catalog",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-tutorial-catalog",
+      "status": "active",
+      "kind": "source",
+      "source_type": "tutorial",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-user-guide-transport-properties",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-user-guide-transport-properties",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-user-guide-turbulence-properties",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-user-guide-turbulence-properties",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-user-guide-boundary-conditions",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-user-guide-boundary-conditions",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-docs-inletOutlet-backflow",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-docs-inletOutlet-backflow",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "2212"
+      ]
+    },
+    {
+      "id": "official-openfoam-field-file-format",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-field-file-format",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-user-guide-checkMesh",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-user-guide-checkMesh",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-mesh-quality-guidance",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-mesh-quality-guidance",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-user-guide-parallel",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-user-guide-parallel",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-decomposePar-guide",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-decomposePar-guide",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-thermophysical-properties",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-thermophysical-properties",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-hydrostatic-pressure-effects",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-hydrostatic-pressure-effects",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "latest"
+      ]
+    },
+    {
+      "id": "official-openfoam-compressible-setup-guidance",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-compressible-setup-guidance",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-turbulence-model-overview",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-turbulence-model-overview",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-cfd-direct-turbulence-wall-function-guidance",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-cfd-direct-turbulence-wall-function-guidance",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "cfd-direct"
+      ],
+      "version_scope": [
+        "v13"
+      ]
+    },
+    {
+      "id": "official-openfoam-xifoam-guide",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-xifoam-guide",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "latest"
+      ]
+    },
+    {
+      "id": "official-openfoam-reactingfoam-guide",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-reactingfoam-guide",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "latest"
+      ]
+    },
+    {
+      "id": "official-openfoam-firefoam-guide",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-firefoam-guide",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "2306"
+      ]
+    },
+    {
+      "id": "official-openfoam-sprayfoam-guide",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-sprayfoam-guide",
+      "status": "active",
+      "kind": "source",
+      "source_type": "official",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "2306"
+      ]
+    },
+    {
+      "id": "official-openfoam-tutorial-premixed-combustion-xifoam",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-tutorial-premixed-combustion-xifoam",
+      "status": "active",
+      "kind": "source",
+      "source_type": "tutorial",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-tutorial-nonpremixed-diffusion-reactingfoam",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-tutorial-nonpremixed-diffusion-reactingfoam",
+      "status": "active",
+      "kind": "source",
+      "source_type": "tutorial",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "official-openfoam-tutorial-buoyant-fire-compartment-firefoam",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-tutorial-buoyant-fire-compartment-firefoam",
+      "status": "active",
+      "kind": "source",
+      "source_type": "tutorial",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "2306"
+      ]
+    },
+    {
+      "id": "official-openfoam-tutorial-spray-combustion-sprayfoam",
+      "aliases": [],
+      "path": "references/source-index.yaml#official-openfoam-tutorial-spray-combustion-sprayfoam",
+      "status": "active",
+      "kind": "source",
+      "source_type": "tutorial",
+      "distribution_scope": [
+        "openfoam-com"
+      ],
+      "version_scope": [
+        "2306"
+      ]
+    },
+    {
+      "id": "community-triage-policy-seed",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-triage-policy-seed",
+      "status": "active",
+      "kind": "source",
+      "source_type": "internal",
+      "distribution_scope": [
+        "repository-internal"
+      ],
+      "version_scope": [
+        "not-applicable"
+      ]
+    },
+    {
+      "id": "community-cfd-online-reactingfoam-diffusion-flame-thread",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-cfd-online-reactingfoam-diffusion-flame-thread",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "cfd-online"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-cfd-online-firefoam-compartment-fire-thread",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-cfd-online-firefoam-compartment-fire-thread",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "cfd-online"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-cfd-online-sprayfoam-startup-thread",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-cfd-online-sprayfoam-startup-thread",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "cfd-online"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-simscale-kb-floating-point-exception",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-simscale-kb-floating-point-exception",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "simscale"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-simscale-docs-relaxation-factors",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-simscale-docs-relaxation-factors",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "simscale"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-simscale-forum-floating-point-thread",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-simscale-forum-floating-point-thread",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "simscale"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-simscale-kb-inconsistent-patch-patchfield",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-simscale-kb-inconsistent-patch-patchfield",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "simscale"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-simscale-kb-empty-2d-boundary",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-simscale-kb-empty-2d-boundary",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "simscale"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-simscale-kb-divergence-localization",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-simscale-kb-divergence-localization",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "simscale"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-simscale-kb-continuity-error",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-simscale-kb-continuity-error",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "simscale"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-simscale-docs-pressure-outlet-backflow",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-simscale-docs-pressure-outlet-backflow",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "simscale"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-simscale-docs-modified-pressure-reference",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-simscale-docs-modified-pressure-reference",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "simscale"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-simscale-docs-k-epsilon-guidance",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-simscale-docs-k-epsilon-guidance",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "simscale"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-simscale-docs-k-omega-sst-guidance",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-simscale-docs-k-omega-sst-guidance",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "simscale"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-simscale-docs-mesh-quality-visualization",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-simscale-docs-mesh-quality-visualization",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "simscale"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-simscale-docs-non-orthogonal-correctors",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-simscale-docs-non-orthogonal-correctors",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "simscale"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-openfoam-bugtracker-coupled-patch-parallel-crash",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-openfoam-bugtracker-coupled-patch-parallel-crash",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "openfoam-plus"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    },
+    {
+      "id": "community-openfoam-bugtracker-cyclicami-single-sided-parallel-crash",
+      "aliases": [],
+      "path": "references/source-index.yaml#community-openfoam-bugtracker-cyclicami-single-sided-parallel-crash",
+      "status": "active",
+      "kind": "source",
+      "source_type": "community",
+      "distribution_scope": [
+        "openfoam-foundation"
+      ],
+      "version_scope": [
+        "unspecified"
+      ]
+    }
+  ]
+}

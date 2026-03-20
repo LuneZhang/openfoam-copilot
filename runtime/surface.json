@@ -1,0 +1,93 @@
+{
+  "surface_version": 1,
+  "path_match_policy": {
+    "root": ".",
+    "path_style": "repository-relative",
+    "allowed_pattern_types": [
+      "exact_path",
+      "glob"
+    ],
+    "precedence": [
+      "exact_path",
+      "more_specific_glob",
+      "less_specific_glob"
+    ]
+  },
+  "default_retrieval_policy": {
+    "default_classes": [
+      "runtime_public"
+    ],
+    "include_runtime_support_when": [
+      "A runtime_public file routes the consumer into a support artifact.",
+      "The task is about runtime contract inspection, helper execution, source traceability, or skill installation."
+    ],
+    "exclude_by_default": [
+      "authoring_only",
+      "project_state"
+    ],
+    "explicit_opt_in_required_for": [
+      "authoring_only",
+      "project_state"
+    ],
+    "entry_surfaces": [
+      "README.md",
+      "AGENT_ENTRY.md",
+      "TROUBLESHOOTING_ENTRY.md",
+      "CASE_AUTO_INTAKE_SPEC.md",
+      "CASE_TRIAGE_PLAYBOOK.md",
+      "skills/openfoam-copilot/SKILL.md"
+    ]
+  },
+  "runtime_public": [
+    "README.md",
+    "AGENT_ENTRY.md",
+    "TROUBLESHOOTING_ENTRY.md",
+    "CASE_AUTO_INTAKE_SPEC.md",
+    "CASE_TRIAGE_PLAYBOOK.md",
+    "PARALLEL_TRIAGE_DECISION_TREE.md",
+    "references/retrieval-order.md",
+    "skills/openfoam-copilot/SKILL.md",
+    "knowledge/**",
+    "ontology/**",
+    "playbooks/**",
+    "prompts/**",
+    "scenario_templates/**"
+  ],
+  "runtime_support": [
+    "references/**",
+    "runtime/**",
+    "scripts/**",
+    "skills/**"
+  ],
+  "authoring_only": [
+    ".git/**",
+    ".github/**",
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "dist/**",
+    "knowledge/AGENTS.md",
+    "knowledge/community/source-records/AGENTS.md",
+    "ontology/troubleshooting-graph/nodes/AGENTS.md",
+    "playbooks/AGENTS.md",
+    "prompts/AGENTS.md",
+    "references/AGENTS.md",
+    "scenario_templates/AGENTS.md",
+    "schemas/**"
+  ],
+  "project_state": [
+    ".sisyphus/**",
+    "DETAILED_DESIGN_V2.md",
+    "MASTER_PLAN.md",
+    "NEXT_STAGE_STARTUP_CHECKLIST.md",
+    "PHASE1_BACKLOG.md",
+    "PHASE1_PROGRESS.md",
+    "PHASE1_STAGE_GATE.md",
+    "PHASE2_BRANCH_CLOSURE_PLAN.md",
+    "SCENARIO_EXPANSION_PROGRESS.md",
+    "SCENARIO_EXPANSION_STAGE_GATE.md",
+    "VALIDATION_CASE_MATRIX.md",
+    "VALIDATION_RESULTS.md",
+    "VALIDATION_STAGE_GATE.md",
+    "VALIDATION_WORKFLOW.md"
+  ]
+}

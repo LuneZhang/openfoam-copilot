@@ -1,7 +1,7 @@
 # Validation Case Matrix
 
-Date: 2026-03-16
-Status: active; compressible batch started
+Date: 2026-03-19
+Status: active; combustion family D-block added
 
 ## Purpose
 
@@ -101,6 +101,68 @@ Expected first branches:
 
 What should be true:
 - agent should distinguish local hotspot behavior from whole-case reacting impossibility
+
+### D. Narrow combustion family expansion
+
+#### D1. Premixed combustion baseline with wrong progress-variable or ignition startup structure
+Expected scenario branch:
+- `premixed-combustion-baseline`
+Expected playbook branch:
+- `first-pass-case-setup-checklist`
+Expected first branches:
+- `premixed-ignition-or-flame-speed-model-mismatch`
+- `reacting-startup-coupling-too-stiff`
+
+What should be true:
+- agent should check premixed progress-variable and ignition structure before falling back to generic reacting startup advice
+
+#### D2. Nonpremixed diffusion flame with mismatched fuel and oxidizer stream states
+Expected scenario branch:
+- `nonpremixed-diffusion-flame`
+Expected playbook branch:
+- `boundary-condition-design-v1`
+Expected first branches:
+- `nonpremixed-mixture-fraction-or-stoichiometric-inlet-mismatch`
+- `outlet-backflow-role-confusion`
+
+What should be true:
+- agent should inspect separated-stream species and reverse-flow state treatment before generic chemistry-stiffness tuning
+
+#### D3. Buoyant fire compartment with opening and reference-state mismatch
+Expected scenario branch:
+- `buoyant-fire-compartment`
+Expected playbook branch:
+- `boundary-condition-design-v1`
+Expected first branches:
+- `firefoam-ventilation-radiation-or-hrr-coupling-mismatch`
+- `buoyant-pressure-anchor-reference-mismatch`
+
+What should be true:
+- agent should treat ventilation openings, ambient return state, and modified-pressure framing as the first structural branch
+
+#### D4. Partially premixed recirculating combustor with unstable return-state framing
+Expected scenario branch:
+- `partially-premixed-recirculating-combustor`
+Expected playbook branch:
+- `boundary-condition-design-v1`
+Expected first branches:
+- `recirculating-combustor-flame-holding-or-backflow-mismatch`
+- `outlet-backflow-role-confusion`
+
+What should be true:
+- agent should review the recirculating mixture state and pilot/backflow structure before generic reacting startup damping
+
+#### D5. Spray combustion that destabilizes at injection onset
+Expected scenario branch:
+- `spray-combustion`
+Expected playbook branch:
+- `divergence-recovery-v1`
+Expected first branches:
+- `spray-injection-evaporation-coupling-startup-fragility`
+- `reacting-startup-coupling-too-stiff`
+
+What should be true:
+- agent should inspect parcel and injector structure before treating the case as only a generic reacting stiffness problem
 
 ## Minimum acceptance standard
 

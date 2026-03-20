@@ -11,12 +11,18 @@ Decide whether the case is:
 - numerically conservative enough for startup
 - at obvious risk of divergence or fake convergence
 
+## Runtime inputs
+- Read `runtime/generated/agent-entry.md` for the current case-review lane.
+- Read `runtime/generated/retrieval-order.md` for deterministic retrieval order.
+- Respect `runtime/contract.json` and `runtime/surface.json` so project-state docs stay outside default runtime review.
+
 ## Required workflow
-1. Identify the closest scenario template.
-2. Use the setup checklist as the default review skeleton.
-3. Cross-check the scenario’s `common_failure_branches`.
-4. Pull in playbooks only where the case shows a clear risk branch.
-5. Keep official notes primary and community records secondary.
+1. Read `runtime/generated/agent-entry.md` and follow its case-review lane.
+2. Identify the closest scenario template.
+3. Use the setup checklist as the default review skeleton.
+4. Cross-check the scenario's `common_failure_branches`.
+5. Pull in playbooks only where the case shows a clear risk branch.
+6. Keep official notes primary and community records secondary.
 
 ## Review dimensions
 ### A. Solver-family fit
@@ -60,7 +66,8 @@ Decide whether the case is:
 ## Hard rules
 - Do not treat a case as healthy just because the dictionaries look populated.
 - Distinguish structural risk from numerics-tuning risk.
-- Prefer a conservative startup recommendation over a fragile “high performance” setup when uncertainty is high.
+- Prefer a conservative startup recommendation over a fragile high-performance setup when uncertainty is high.
 - For compressible thermo cases, do not approve a brittle steady-startup path before solver-family, thermo package, BC coupling, and hotspot-prone mesh regions are reviewed.
 - For multiphase cases, do not approve the setup before pressure convention, phase-field initialization, interface-coupled BCs, and interface-region mesh fragility have been reviewed.
 - For reacting cases, do not approve the setup before solver-family, thermo package, chemistry/species structure, coupled reacting BCs, and hotspot-prone regions have been reviewed.
+- If a hand-authored wrapper and a generated runtime view differ on routing order, follow the generated runtime view and the runtime metadata behind it.

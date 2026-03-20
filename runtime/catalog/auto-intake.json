@@ -1,0 +1,186 @@
+{
+  "catalog_version": 1,
+  "catalog_kind": "auto_intake_contract",
+  "path_style": "repository-relative",
+  "helper": {
+    "path": "scripts/case_auto_intake.py",
+    "optional": true,
+    "mode": "heuristic-first-pass"
+  },
+  "fixture_case": "runtime/fixtures/cases/minimal-valid-case",
+  "required_fields": [
+    "case_path",
+    "case_name",
+    "is_case_root",
+    "structure_inventory",
+    "application",
+    "scenario_family_guess",
+    "scenario_family_reasons",
+    "pressure_variable_hint",
+    "parallel_hint",
+    "key_files",
+    "zero_fields",
+    "log_files",
+    "failure_signals",
+    "recommended_first_read_order",
+    "notes"
+  ],
+  "required_structure_inventory_fields": [
+    "has_zero_dir",
+    "has_constant_dir",
+    "has_system_dir",
+    "has_post_processing_dir",
+    "has_processor_dirs",
+    "processor_dir_count"
+  ],
+  "authoritative_fields": [
+    "case_path",
+    "case_name",
+    "is_case_root",
+    "structure_inventory",
+    "application",
+    "key_files",
+    "zero_fields",
+    "log_files"
+  ],
+  "heuristic_fields": [
+    "scenario_family_guess",
+    "scenario_family_reasons",
+    "pressure_variable_hint",
+    "parallel_hint",
+    "failure_signals",
+    "recommended_first_read_order",
+    "notes"
+  ],
+  "supported_values": {
+    "scenario_family_guess": [
+      "compressible",
+      "multiphase",
+      "reacting",
+      "incompressible_or_unknown"
+    ],
+    "pressure_variable_hint": [
+      "both",
+      "p_rgh",
+      "p",
+      "neither"
+    ],
+    "parallel_hint": [
+      "already_decomposed",
+      "parallel_capable",
+      "parallel_hint_from_logs",
+      "serial_or_unknown"
+    ],
+    "failure_signals": [
+      "ami_or_interface",
+      "bounding_or_clipping",
+      "continuity_error",
+      "courant_issue",
+      "fatal_io_or_dictionary",
+      "floating_point_exception",
+      "processor_boundary_issue",
+      "residual_blowup"
+    ]
+  },
+  "manual_fallback_inputs": [
+    "case path",
+    "optional log path",
+    "optional short failure description",
+    "optional serial-vs-parallel hint"
+  ],
+  "fields": {
+    "case_path": {
+      "type": "string",
+      "required": true,
+      "classification": "authoritative",
+      "description": "Absolute resolved path to the supplied case directory."
+    },
+    "case_name": {
+      "type": "string",
+      "required": true,
+      "classification": "authoritative",
+      "description": "Stable basename derived from the resolved case path."
+    },
+    "is_case_root": {
+      "type": "boolean",
+      "required": true,
+      "classification": "authoritative",
+      "description": "True only when `0/`, `constant/`, and `system/` all exist as directories."
+    },
+    "structure_inventory": {
+      "type": "object",
+      "required": true,
+      "classification": "authoritative",
+      "description": "Explicit top-level case markers and processor-directory count."
+    },
+    "application": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "required": true,
+      "classification": "authoritative",
+      "description": "Solver name parsed from `system/controlDict` when present."
+    },
+    "scenario_family_guess": {
+      "type": "string",
+      "required": true,
+      "classification": "heuristic",
+      "description": "First-pass family guess from fields, dictionaries, and solver hints."
+    },
+    "scenario_family_reasons": {
+      "type": "array[string]",
+      "required": true,
+      "classification": "heuristic",
+      "description": "Short reasons explaining the family guess."
+    },
+    "pressure_variable_hint": {
+      "type": "string",
+      "required": true,
+      "classification": "heuristic",
+      "description": "Derived from the filenames present under `0/`."
+    },
+    "parallel_hint": {
+      "type": "string",
+      "required": true,
+      "classification": "heuristic",
+      "description": "Derived from processor directories, `decomposeParDict`, and limited log text."
+    },
+    "key_files": {
+      "type": "object",
+      "required": true,
+      "classification": "authoritative",
+      "description": "Known case dictionaries as absolute paths or `null` when absent."
+    },
+    "zero_fields": {
+      "type": "array[string]",
+      "required": true,
+      "classification": "authoritative",
+      "description": "Sorted filenames found directly under `0/`."
+    },
+    "log_files": {
+      "type": "array[string]",
+      "required": true,
+      "classification": "authoritative",
+      "description": "Absolute paths to root-level `log*` or `*.log` files."
+    },
+    "failure_signals": {
+      "type": "array[string]",
+      "required": true,
+      "classification": "heuristic",
+      "description": "Supported regex-derived signal tags from a small set of root-level log files."
+    },
+    "recommended_first_read_order": {
+      "type": "array[string]",
+      "required": true,
+      "classification": "heuristic",
+      "description": "Repository-relative next reads for routing; empty when the path is not a recognizable case root."
+    },
+    "notes": {
+      "type": "array[string]",
+      "required": true,
+      "classification": "heuristic",
+      "description": "Guardrails that remind consumers to treat auto-intake as a scoped routing aid, not diagnosis."
+    }
+  }
+}

@@ -5,7 +5,7 @@ problem_class: turbulence
 confidence: high
 source_refs:
 - official-openfoam-turbulence-model-overview
-- official-openfoam-turbulence-properties
+- official-openfoam-user-guide-turbulence-properties
 
 ## Why this note exists
 

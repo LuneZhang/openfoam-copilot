@@ -20,6 +20,7 @@ recommended_agent_behavior:
 
 source_refs:
 - community-openfoam-bugtracker-coupled-patch-parallel-crash
+- community-openfoam-bugtracker-cyclicami-single-sided-parallel-crash
 - official-openfoam-user-guide-parallel
 - official-openfoam-decomposePar-guide
 

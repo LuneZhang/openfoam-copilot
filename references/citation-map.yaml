@@ -238,6 +238,11 @@ citations:
       - official-openfoam-user-guide-solver-selection
       - official-openfoam-user-guide-checkMesh
       - official-openfoam-user-guide-controlDict
+      - official-openfoam-xifoam-guide
+      - official-openfoam-reactingfoam-guide
+      - official-openfoam-firefoam-guide
+      - official-openfoam-sprayfoam-guide
+      - official-openfoam-hydrostatic-pressure-effects
 
   - target: playbooks/debug-routing/playbook-to-node-routing-v1.md
     source_refs:
@@ -245,6 +250,9 @@ citations:
       - official-openfoam-user-guide-fvSchemes
       - official-openfoam-user-guide-boundary-conditions
       - official-openfoam-user-guide-checkMesh
+      - official-openfoam-docs-inletOutlet-backflow
+      - official-openfoam-firefoam-guide
+      - official-openfoam-sprayfoam-guide
 
   - target: prompts/setup-assistant.md
     source_refs:
@@ -264,3 +272,138 @@ citations:
       - official-openfoam-user-guide-fvSchemes
       - official-openfoam-user-guide-fvSolution
 
+  - target: knowledge/official/combustion/combustion-family-map.md
+    source_refs:
+      - official-openfoam-user-guide-solver-selection
+      - official-openfoam-xifoam-guide
+      - official-openfoam-reactingfoam-guide
+      - official-openfoam-firefoam-guide
+      - official-openfoam-sprayfoam-guide
+
+  - target: knowledge/official/combustion/firefoam-sprayfoam-scope-sensitivity.md
+    source_refs:
+      - official-openfoam-firefoam-guide
+      - official-openfoam-sprayfoam-guide
+      - official-openfoam-tutorial-catalog
+      - official-openfoam-user-guide-solver-selection
+
+  - target: knowledge/tutorials/premixed-combustion-baseline-pattern.md
+    source_refs:
+      - official-openfoam-tutorial-premixed-combustion-xifoam
+      - official-openfoam-tutorial-catalog
+      - official-openfoam-xifoam-guide
+      - official-openfoam-thermophysical-properties
+
+  - target: knowledge/tutorials/nonpremixed-diffusion-flame-pattern.md
+    source_refs:
+      - official-openfoam-tutorial-nonpremixed-diffusion-reactingfoam
+      - official-openfoam-tutorial-catalog
+      - official-openfoam-reactingfoam-guide
+      - official-openfoam-thermophysical-properties
+
+  - target: knowledge/tutorials/buoyant-fire-compartment-pattern.md
+    source_refs:
+      - official-openfoam-tutorial-buoyant-fire-compartment-firefoam
+      - official-openfoam-firefoam-guide
+      - official-openfoam-hydrostatic-pressure-effects
+      - official-openfoam-tutorial-catalog
+
+  - target: knowledge/tutorials/partially-premixed-recirculating-combustor-pattern.md
+    source_refs:
+      - official-openfoam-tutorial-premixed-combustion-xifoam
+      - official-openfoam-tutorial-catalog
+      - official-openfoam-xifoam-guide
+      - official-openfoam-docs-inletOutlet-backflow
+
+  - target: knowledge/tutorials/spray-combustion-pattern.md
+    source_refs:
+      - official-openfoam-tutorial-spray-combustion-sprayfoam
+      - official-openfoam-tutorial-catalog
+      - official-openfoam-sprayfoam-guide
+      - official-openfoam-thermophysical-properties
+
+  - target: scenario_templates/premixed-combustion-baseline.md
+    source_refs:
+      - official-openfoam-tutorial-premixed-combustion-xifoam
+      - official-openfoam-xifoam-guide
+      - official-openfoam-thermophysical-properties
+      - official-openfoam-user-guide-controlDict
+      - official-openfoam-user-guide-fvSchemes
+      - official-openfoam-user-guide-fvSolution
+
+  - target: scenario_templates/nonpremixed-diffusion-flame.md
+    source_refs:
+      - official-openfoam-tutorial-nonpremixed-diffusion-reactingfoam
+      - official-openfoam-reactingfoam-guide
+      - official-openfoam-thermophysical-properties
+      - official-openfoam-user-guide-controlDict
+      - official-openfoam-user-guide-fvSchemes
+      - official-openfoam-user-guide-fvSolution
+      - community-cfd-online-reactingfoam-diffusion-flame-thread
+
+  - target: scenario_templates/buoyant-fire-compartment.md
+    source_refs:
+      - official-openfoam-tutorial-buoyant-fire-compartment-firefoam
+      - official-openfoam-firefoam-guide
+      - official-openfoam-hydrostatic-pressure-effects
+      - official-openfoam-user-guide-boundary-conditions
+      - official-openfoam-user-guide-controlDict
+      - community-cfd-online-firefoam-compartment-fire-thread
+
+  - target: scenario_templates/partially-premixed-recirculating-combustor.md
+    source_refs:
+      - official-openfoam-tutorial-premixed-combustion-xifoam
+      - official-openfoam-xifoam-guide
+      - official-openfoam-docs-inletOutlet-backflow
+      - official-openfoam-thermophysical-properties
+      - community-simscale-docs-pressure-outlet-backflow
+
+  - target: scenario_templates/spray-combustion.md
+    source_refs:
+      - official-openfoam-tutorial-spray-combustion-sprayfoam
+      - official-openfoam-sprayfoam-guide
+      - official-openfoam-thermophysical-properties
+      - official-openfoam-user-guide-controlDict
+      - official-openfoam-user-guide-fvSchemes
+      - official-openfoam-user-guide-fvSolution
+      - community-cfd-online-sprayfoam-startup-thread
+
+  - target: ontology/troubleshooting-graph/nodes/premixed-ignition-or-flame-speed-model-mismatch.md
+    source_refs:
+      - official-openfoam-xifoam-guide
+      - official-openfoam-tutorial-premixed-combustion-xifoam
+      - official-openfoam-thermophysical-properties
+      - official-openfoam-user-guide-controlDict
+      - official-openfoam-user-guide-fvSchemes
+      - official-openfoam-user-guide-fvSolution
+
+  - target: ontology/troubleshooting-graph/nodes/nonpremixed-mixture-fraction-or-stoichiometric-inlet-mismatch.md
+    source_refs:
+      - official-openfoam-reactingfoam-guide
+      - official-openfoam-tutorial-nonpremixed-diffusion-reactingfoam
+      - official-openfoam-user-guide-boundary-conditions
+      - official-openfoam-docs-inletOutlet-backflow
+      - community-cfd-online-reactingfoam-diffusion-flame-thread
+
+  - target: ontology/troubleshooting-graph/nodes/firefoam-ventilation-radiation-or-hrr-coupling-mismatch.md
+    source_refs:
+      - official-openfoam-firefoam-guide
+      - official-openfoam-tutorial-buoyant-fire-compartment-firefoam
+      - official-openfoam-hydrostatic-pressure-effects
+      - official-openfoam-docs-inletOutlet-backflow
+      - community-cfd-online-firefoam-compartment-fire-thread
+
+  - target: ontology/troubleshooting-graph/nodes/recirculating-combustor-flame-holding-or-backflow-mismatch.md
+    source_refs:
+      - official-openfoam-xifoam-guide
+      - official-openfoam-tutorial-premixed-combustion-xifoam
+      - official-openfoam-docs-inletOutlet-backflow
+      - community-simscale-docs-pressure-outlet-backflow
+
+  - target: ontology/troubleshooting-graph/nodes/spray-injection-evaporation-coupling-startup-fragility.md
+    source_refs:
+      - official-openfoam-sprayfoam-guide
+      - official-openfoam-tutorial-spray-combustion-sprayfoam
+      - official-openfoam-thermophysical-properties
+      - official-openfoam-user-guide-controlDict
+      - community-cfd-online-sprayfoam-startup-thread

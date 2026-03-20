@@ -2,39 +2,42 @@
 
 ## Purpose
 
-This file is the top-level troubleshooting entry for agents using this repository.
+This is the hand-authored troubleshooting wrapper for agents using this repository.
 
-Its job is to answer three questions early:
+Use it to answer three questions early:
 1. which scenario family is this case closest to?
 2. is the problem mainly structural, numerical, mesh-driven, or parallel-sensitive?
 3. which node family should be loaded first instead of searching broadly?
 
-This file is intentionally short.
-It routes into the more detailed playbooks, nodes, and decision trees.
+## Runtime source of truth
 
----
+Use `runtime/generated/troubleshooting-entry.md` for the canonical troubleshooting order.
 
-## Default agent reading order for troubleshooting
+Treat these runtime files as the factual spine behind that generated view:
+- `runtime/contract.json`
+- `runtime/surface.json`
+- `runtime/catalog/scenarios.json`
+- `runtime/catalog/playbooks.json`
+- `runtime/catalog/nodes.json`
 
-Assume this file is already open.
+This file adds classifier guidance after the generated path is chosen. It should not become a second routing table.
 
-1. if a case path is available, use `CASE_AUTO_INTAKE_SPEC.md` and `CASE_TRIAGE_PLAYBOOK.md` to collect a first-pass case snapshot
-2. identify the closest `scenario_templates/` file
-3. read `playbooks/debug-routing/scenario-to-node-routing-v1.md`
-4. if the symptom is parallel-sensitive, read `PARALLEL_TRIAGE_DECISION_TREE.md`
-5. read `playbooks/debug-routing/playbook-to-node-routing-v1.md`
-6. load the top 1–3 troubleshooting nodes
-7. then consult `knowledge/official/` and `knowledge/community/` as evidence layers
+## Runtime boundary
 
-Do not reverse this order.
-Do not begin with broad source search unless routing failed.
+- Default to runtime-facing troubleshooting, routing, and knowledge files.
+- Do not pull in `.sisyphus/`, stage-gate docs, progress logs, or validation reports unless the task is explicitly about repository status or validation history.
 
----
+## How to use this file
+
+1. Follow `runtime/generated/troubleshooting-entry.md` through helper/manual intake, scenario match, and routing playbooks.
+2. Use the classifier guidance below to rank the first checks and choose the strongest node branch.
+3. Keep `prompts/troubleshooting-assistant.md` aligned with the generated troubleshooting path rather than inventing a new order here.
 
 ## First classifier: serial vs parallel
 
 ### If serial is already clearly broken
 Treat the case as a structural or setup-class problem first.
+
 Prioritize:
 - BC structure
 - pressure convention / anchor semantics
@@ -46,8 +49,6 @@ Prioritize:
 Enter the parallel branch first:
 - start with `parallel-only-failure`
 - then use `PARALLEL_TRIAGE_DECISION_TREE.md`
-
----
 
 ## Second classifier: structural vs numerics-first
 
@@ -93,8 +94,6 @@ Typical nodes:
 - `residual-plateau-fake-convergence`
 - `continuity-error-growth`
 
----
-
 ## Third classifier: local hotspot vs global fragility
 
 Ask early:
@@ -109,8 +108,6 @@ Prefer hotspot routing first:
 ### If the whole case is broadly unstable
 Use wider numerics / continuity / solver-family routing.
 
----
-
 ## Fourth classifier: evidence tier
 
 When the agent makes recommendations:
@@ -122,8 +119,6 @@ If official and community guidance conflict:
 - prefer official guidance
 - keep the community heuristic only as a lower-confidence branch clue
 
----
-
 ## Anti-patterns
 
 Do not let the agent do these too early:
@@ -134,14 +129,10 @@ Do not let the agent do these too early:
 - treat every outlet-local failure as numerics-only
 - trust average mesh quality over the first unstable region
 
----
+## Recommended companion surfaces
 
-## Recommended companion files
-
+- `runtime/generated/troubleshooting-entry.md`
 - `CASE_AUTO_INTAKE_SPEC.md`
 - `CASE_TRIAGE_PLAYBOOK.md`
-- `playbooks/debug-routing/scenario-to-node-routing-v1.md`
-- `playbooks/debug-routing/playbook-to-node-routing-v1.md`
 - `PARALLEL_TRIAGE_DECISION_TREE.md`
 - `prompts/troubleshooting-assistant.md`
-- `SCENARIO_EXPANSION_PROGRESS.md`

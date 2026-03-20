@@ -1,0 +1,217 @@
+{
+  "catalog_version": 1,
+  "catalog_kind": "nodes",
+  "path_style": "repository-relative",
+  "items": [
+    {
+      "id": "buoyant-pressure-anchor-reference-mismatch",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/buoyant-pressure-anchor-reference-mismatch.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "compressible-steady-startup-too-brittle",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/compressible-steady-startup-too-brittle.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "continuity-error-growth",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/continuity-error-growth.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "courant-driven-transient-instability",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/courant-driven-transient-instability.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "critical-region-local-mesh-hotspot",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/critical-region-local-mesh-hotspot.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "decomposition-fragmented-hotspot-vs-interface-semantic-defect",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/decomposition-fragmented-hotspot-vs-interface-semantic-defect.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "floating-point-exception-startup",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/floating-point-exception-startup.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "illegal-empty-2d-boundary-usage",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/illegal-empty-2d-boundary-usage.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "localized-divergence-hotspot-triage",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/localized-divergence-hotspot-triage.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "mesh-quality-driven-instability",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/mesh-quality-driven-instability.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "multiphase-interface-initialization-mismatch",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/multiphase-interface-initialization-mismatch.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "outlet-backflow-role-confusion",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/outlet-backflow-role-confusion.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "p-vs-p_rgh-confusion",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/p-vs-p_rgh-confusion.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "parallel-only-failure",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/parallel-only-failure.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "patch-name-boundary-mismatch",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/patch-name-boundary-mismatch.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "processor-boundary-field-inconsistency",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/processor-boundary-field-inconsistency.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "processor-count-sensitive-parallel-failure",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/processor-count-sensitive-parallel-failure.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "reacting-startup-coupling-too-stiff",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/reacting-startup-coupling-too-stiff.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "premixed-ignition-or-flame-speed-model-mismatch",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/premixed-ignition-or-flame-speed-model-mismatch.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "nonpremixed-mixture-fraction-or-stoichiometric-inlet-mismatch",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/nonpremixed-mixture-fraction-or-stoichiometric-inlet-mismatch.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "firefoam-ventilation-radiation-or-hrr-coupling-mismatch",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/firefoam-ventilation-radiation-or-hrr-coupling-mismatch.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "recirculating-combustor-flame-holding-or-backflow-mismatch",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/recirculating-combustor-flame-holding-or-backflow-mismatch.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "spray-injection-evaporation-coupling-startup-fragility",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/spray-injection-evaporation-coupling-startup-fragility.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "residual-plateau-fake-convergence",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/residual-plateau-fake-convergence.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "steady-state-divergence-overaggressive-numerics",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/steady-state-divergence-overaggressive-numerics.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "thermo-chemistry-package-inconsistency",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/thermo-chemistry-package-inconsistency.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "turbulence-field-family-patch-role-mismatch",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/turbulence-field-family-patch-role-mismatch.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "turbulence-field-startup-mismatch",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/turbulence-field-startup-mismatch.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "unremovable-continuity-error-bc-balance",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/unremovable-continuity-error-bc-balance.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    },
+    {
+      "id": "wrong-solver-family-selection",
+      "aliases": [],
+      "path": "ontology/troubleshooting-graph/nodes/wrong-solver-family-selection.md",
+      "status": "active",
+      "kind": "troubleshooting_node"
+    }
+  ]
+}

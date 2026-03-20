@@ -1,6 +1,13 @@
 # Reacting / Combustion Flow — Generic Template
 
 scenario_name: reacting-combustion-flow-generic
+scenario_role: active parent and fallback for combustion cases when no narrow family is clearly dominant
+narrow_specializations:
+- premixed-combustion-baseline
+- nonpremixed-diffusion-flame
+- buoyant-fire-compartment
+- partially-premixed-recirculating-combustor
+- spray-combustion
 steady_or_transient_intent: usually transient or cautiously staged startup first, because thermo, chemistry, and flow coupling are often too stiff for an immediate aggressive solve
 representative_problem_class: reacting or combustion flow where thermo, species, and heat-release coupling materially affect the solution behavior
 
@@ -26,6 +33,7 @@ key_dictionaries:
 
 initialization_guidance:
 - begin from the nearest official reacting or combustion tutorial family rather than extending a non-reacting template ad hoc
+- if one of the five narrow combustion families clearly matches the case, route there first and keep this template as the fallback parent rather than the primary working surface
 - make thermo package, chemistry model class, and species-field set explicit at startup
 - initialize pressure, temperature, and species fields on physically plausible scales; do not treat chemistry fields as optional decorations
 - when structure is still uncertain, prefer a conservative staged or transient startup before pushing an aggressive target solve

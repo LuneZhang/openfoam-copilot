@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "schema_kind": "routing_fixture_schema",
+  "suite_file_kind": "routing_fixture_suite",
+  "suite_field": "suite",
+  "required_suite_keys": [
+    "fixture_schema_version",
+    "fixture_kind",
+    "suite",
+    "description",
+    "cases"
+  ],
+  "required_case_keys": [
+    "id",
+    "suite",
+    "matrix_ref",
+    "title",
+    "scenario_id",
+    "playbook_id",
+    "focus",
+    "tags",
+    "expectations"
+  ],
+  "allowed_focus_values": [
+    "structural-setup",
+    "startup-stiffness",
+    "mesh-hotspot",
+    "interface-initialization",
+    "parallel-sensitive"
+  ],
+  "expectations": {
+    "required_keys": [
+      "primary_branch_top_n",
+      "primary_branch_any_of",
+      "required_nodes_in_top_n",
+      "avoid_nodes_in_top_n"
+    ],
+    "required_node_window_keys": [
+      "top_n",
+      "ids"
+    ],
+    "minimum_top_n": 1
+  }
+}

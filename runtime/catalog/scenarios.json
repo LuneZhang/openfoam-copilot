@@ -1,0 +1,115 @@
+{
+  "catalog_version": 1,
+  "catalog_kind": "scenarios",
+  "path_style": "repository-relative",
+  "items": [
+    {
+      "id": "incompressible-laminar-internal-flow",
+      "aliases": [],
+      "path": "scenario_templates/incompressible-laminar-internal-flow.md",
+      "status": "active",
+      "kind": "scenario_template"
+    },
+    {
+      "id": "incompressible-rans-external-aerodynamics",
+      "aliases": [],
+      "path": "scenario_templates/incompressible-rans-external-aerodynamics.md",
+      "status": "active",
+      "kind": "scenario_template"
+    },
+    {
+      "id": "buoyant-natural-convection-room-scale",
+      "aliases": [],
+      "path": "scenario_templates/buoyant-natural-convection-room-scale.md",
+      "status": "active",
+      "kind": "scenario_template"
+    },
+    {
+      "id": "compressible-thermo-flow-generic",
+      "aliases": [],
+      "path": "scenario_templates/compressible-thermo-flow-generic.md",
+      "status": "active",
+      "kind": "scenario_template"
+    },
+    {
+      "id": "multiphase-interface-flow-generic",
+      "aliases": [],
+      "path": "scenario_templates/multiphase-interface-flow-generic.md",
+      "status": "active",
+      "kind": "scenario_template"
+    },
+    {
+      "id": "reacting-combustion-flow-generic",
+      "aliases": [
+        "reacting-combustion-generic-template"
+      ],
+      "deprecated_aliases": [
+        "reacting-combustion-generic-template"
+      ],
+      "path": "scenario_templates/reacting-combustion-flow-generic.md",
+      "path_aliases": [
+        "scenario_templates/reacting-combustion-generic-template.md"
+      ],
+      "status": "active",
+      "kind": "scenario_template",
+      "routing_role": "fallback_parent",
+      "specialization_ids": [
+        "premixed-combustion-baseline",
+        "nonpremixed-diffusion-flame",
+        "buoyant-fire-compartment",
+        "partially-premixed-recirculating-combustor",
+        "spray-combustion"
+      ]
+    },
+    {
+      "id": "premixed-combustion-baseline",
+      "aliases": [],
+      "path": "scenario_templates/premixed-combustion-baseline.md",
+      "status": "active",
+      "kind": "scenario_template",
+      "routing_role": "narrow_specialization",
+      "family_priority": 1,
+      "parent_id": "reacting-combustion-flow-generic"
+    },
+    {
+      "id": "nonpremixed-diffusion-flame",
+      "aliases": [],
+      "path": "scenario_templates/nonpremixed-diffusion-flame.md",
+      "status": "active",
+      "kind": "scenario_template",
+      "routing_role": "narrow_specialization",
+      "family_priority": 2,
+      "parent_id": "reacting-combustion-flow-generic"
+    },
+    {
+      "id": "buoyant-fire-compartment",
+      "aliases": [],
+      "path": "scenario_templates/buoyant-fire-compartment.md",
+      "status": "active",
+      "kind": "scenario_template",
+      "routing_role": "narrow_specialization",
+      "family_priority": 3,
+      "parent_id": "reacting-combustion-flow-generic"
+    },
+    {
+      "id": "partially-premixed-recirculating-combustor",
+      "aliases": [],
+      "path": "scenario_templates/partially-premixed-recirculating-combustor.md",
+      "status": "active",
+      "kind": "scenario_template",
+      "routing_role": "narrow_specialization",
+      "family_priority": 4,
+      "parent_id": "reacting-combustion-flow-generic"
+    },
+    {
+      "id": "spray-combustion",
+      "aliases": [],
+      "path": "scenario_templates/spray-combustion.md",
+      "status": "active",
+      "kind": "scenario_template",
+      "routing_role": "narrow_specialization",
+      "family_priority": 5,
+      "parent_id": "reacting-combustion-flow-generic"
+    }
+  ]
+}

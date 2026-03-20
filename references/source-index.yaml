@@ -241,6 +241,94 @@ sources:
     physics_scope: [general]
     summary: Official user-guide guidance stating which wall-function BC families should be applied to turbulence fields such as epsilon, omega, and k on wall patches.
 
+  - id: official-openfoam-xifoam-guide
+    title: OpenFOAM solver guide / XiFoam premixed-combustion anchor
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/guides/latest/man/XiFoam.html
+    trust_level: high
+    tags: [official, combustion, premixed, XiFoam]
+    solver_scope: [reacting, combustion, premixed]
+    physics_scope: [combustion, reacting, thermal]
+    summary: Official solver guide anchor for XiFoam-family premixed combustion, useful for identifying the expected premixed progress-variable and flame-wrinkling branch.
+
+  - id: official-openfoam-reactingfoam-guide
+    title: OpenFOAM solver guide / reactingFoam reacting-flow anchor
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://www.openfoam.com/documentation/guides/latest/man/reactingFoam.html
+    trust_level: high
+    tags: [official, combustion, reacting, reactingFoam, diffusion-flame]
+    solver_scope: [reacting, combustion, nonpremixed]
+    physics_scope: [combustion, reacting, thermal]
+    summary: Official solver guide anchor for reactingFoam-family reacting flow, useful for separated-stream and diffusion-flame style combustion setup.
+
+  - id: official-openfoam-firefoam-guide
+    title: OpenFOAM docs / fireFoam buoyant fire solver anchor
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://doc.openfoam.com/2306/tools/processing/solvers/rtm/combustion/fireFoam/
+    trust_level: high
+    tags: [official, combustion, fireFoam, compartment-fire, buoyancy]
+    solver_scope: [reacting, combustion, buoyant]
+    physics_scope: [combustion, buoyancy, thermal, fire]
+    summary: Official fireFoam anchor for buoyant fire and compartment-fire workflows; treat this solver family as distribution-sensitive and version-sensitive before reusing setup details across forks.
+
+  - id: official-openfoam-sprayfoam-guide
+    title: OpenFOAM docs / sprayFoam spray-combustion solver anchor
+    source_type: official
+    source_name: OpenFOAM Documentation
+    url: https://doc.openfoam.com/2306/tools/processing/solvers/rtm/lagrangian/sprayFoam/
+    trust_level: high
+    tags: [official, combustion, sprayFoam, lagrangian, spray]
+    solver_scope: [reacting, combustion, spray]
+    physics_scope: [combustion, spray, thermal, multiphase]
+    summary: Official sprayFoam anchor for spray-combustion workflows; treat parcel, injection, and carrier-phase details as distribution-sensitive and version-sensitive.
+
+  - id: official-openfoam-tutorial-premixed-combustion-xifoam
+    title: OpenFOAM tutorial guide / premixed XiFoam tutorial family anchor
+    source_type: tutorial
+    source_name: OpenFOAM Tutorials
+    url: https://www.openfoam.com/documentation/tutorial-guide
+    trust_level: high
+    tags: [official, tutorials, combustion, premixed, XiFoam]
+    solver_scope: [reacting, combustion, premixed]
+    physics_scope: [combustion, reacting, thermal]
+    summary: Official tutorial-family anchor for premixed XiFoam-style combustion cases, useful for ignition, progress-variable, and staged-startup comparisons.
+
+  - id: official-openfoam-tutorial-nonpremixed-diffusion-reactingfoam
+    title: OpenFOAM tutorial guide / reactingFoam diffusion-flame tutorial family anchor
+    source_type: tutorial
+    source_name: OpenFOAM Tutorials
+    url: https://www.openfoam.com/documentation/tutorial-guide
+    trust_level: high
+    tags: [official, tutorials, combustion, nonpremixed, diffusion-flame, reactingFoam]
+    solver_scope: [reacting, combustion, nonpremixed]
+    physics_scope: [combustion, reacting, thermal]
+    summary: Official tutorial-family anchor for reactingFoam diffusion-flame style cases with separated reactant streams and species-coupled startup.
+
+  - id: official-openfoam-tutorial-buoyant-fire-compartment-firefoam
+    title: OpenFOAM tutorial guide / fireFoam compartment-fire tutorial family anchor
+    source_type: tutorial
+    source_name: OpenFOAM Tutorials
+    url: https://www.openfoam.com/documentation/tutorial-guide
+    trust_level: high
+    tags: [official, tutorials, combustion, fireFoam, compartment-fire, buoyancy]
+    solver_scope: [reacting, combustion, buoyant]
+    physics_scope: [combustion, buoyancy, fire, thermal]
+    summary: Official tutorial-family anchor for fireFoam-style compartment fire, opening, and ventilation patterns under buoyant combustion framing.
+
+  - id: official-openfoam-tutorial-spray-combustion-sprayfoam
+    title: OpenFOAM tutorial guide / sprayFoam spray-combustion tutorial family anchor
+    source_type: tutorial
+    source_name: OpenFOAM Tutorials
+    url: https://www.openfoam.com/documentation/tutorial-guide
+    trust_level: high
+    tags: [official, tutorials, combustion, sprayFoam, spray]
+    solver_scope: [reacting, combustion, spray]
+    physics_scope: [combustion, spray, thermal, multiphase]
+    summary: Official tutorial-family anchor for sprayFoam-style injector, parcel-cloud, and carrier-phase combustion startup patterns.
+
   - id: community-triage-policy-seed
     title: Internal community-source triage policy seed
     source_type: internal
@@ -251,6 +339,39 @@ sources:
     solver_scope: [general]
     physics_scope: [general]
     summary: Internal policy seed used to normalize future community troubleshooting ingestion.
+
+  - id: community-cfd-online-reactingfoam-diffusion-flame-thread
+    title: CFD Online OpenFOAM forum / reactingFoam diffusion-flame troubleshooting thread family
+    source_type: community
+    source_name: CFD Online OpenFOAM Forum
+    url: https://www.cfd-online.com/Forums/openfoam/
+    trust_level: low
+    tags: [community, forum, combustion, reactingFoam, diffusion-flame, species, backflow]
+    solver_scope: [reacting, combustion, nonpremixed]
+    physics_scope: [combustion, reacting, thermal]
+    summary: Low-trust community discussion family emphasizing that reactingFoam diffusion-flame failures often reduce to fuel/oxidizer stream definitions, species BC coherence, and reverse-flow state treatment before deep numerics tuning.
+
+  - id: community-cfd-online-firefoam-compartment-fire-thread
+    title: CFD Online OpenFOAM forum / fireFoam compartment-fire troubleshooting thread family
+    source_type: community
+    source_name: CFD Online OpenFOAM Forum
+    url: https://www.cfd-online.com/Forums/openfoam/
+    trust_level: low
+    tags: [community, forum, combustion, fireFoam, compartment-fire, p_rgh, ventilation]
+    solver_scope: [reacting, combustion, buoyant]
+    physics_scope: [combustion, fire, buoyancy, thermal]
+    summary: Low-trust community discussion family emphasizing opening-state, ventilation-layout, and modified-pressure reference checks in compartment-fire setups before broad solver retuning.
+
+  - id: community-cfd-online-sprayfoam-startup-thread
+    title: CFD Online OpenFOAM forum / sprayFoam startup troubleshooting thread family
+    source_type: community
+    source_name: CFD Online OpenFOAM Forum
+    url: https://www.cfd-online.com/Forums/openfoam/
+    trust_level: low
+    tags: [community, forum, combustion, sprayFoam, injection, parcels]
+    solver_scope: [reacting, combustion, spray]
+    physics_scope: [combustion, spray, thermal, multiphase]
+    summary: Low-trust community discussion family emphasizing injector, parcel, and carrier-phase startup coherence in sprayFoam before assuming generic reacting stiffness.
 
   - id: community-simscale-kb-floating-point-exception
     title: SimScale Knowledge Base / Floating Point Exception

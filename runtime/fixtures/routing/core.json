@@ -1,0 +1,309 @@
+{
+  "fixture_schema_version": 1,
+  "fixture_kind": "routing_fixture_suite",
+  "suite": "core",
+  "description": "Core routing replay fixtures mirroring the current validation matrix for compressible, multiphase, reacting, setup, and parallel-sensitive branches.",
+  "cases": [
+    {
+      "id": "a1-compressible-thermo-solver-mismatch",
+      "suite": "core",
+      "matrix_ref": "A1",
+      "title": "Compressible structural thermo and solver mismatch",
+      "scenario_id": "compressible-thermo-flow-generic",
+      "playbook_id": "first-pass-case-setup-checklist",
+      "focus": "structural-setup",
+      "tags": [
+        "compressible",
+        "setup",
+        "structural"
+      ],
+      "expectations": {
+        "primary_branch_top_n": 2,
+        "primary_branch_any_of": [
+          "wrong-solver-family-selection",
+          "thermo-chemistry-package-inconsistency"
+        ],
+        "required_nodes_in_top_n": {
+          "top_n": 3,
+          "ids": [
+            "wrong-solver-family-selection",
+            "thermo-chemistry-package-inconsistency"
+          ]
+        },
+        "avoid_nodes_in_top_n": {
+          "top_n": 2,
+          "ids": [
+            "steady-state-divergence-overaggressive-numerics"
+          ]
+        }
+      }
+    },
+    {
+      "id": "a2-compressible-brittle-steady-startup",
+      "suite": "core",
+      "matrix_ref": "A2",
+      "title": "Compressible steady startup brittleness",
+      "scenario_id": "compressible-thermo-flow-generic",
+      "playbook_id": "divergence-recovery-v1",
+      "focus": "startup-stiffness",
+      "tags": [
+        "compressible",
+        "startup",
+        "stiffness"
+      ],
+      "expectations": {
+        "primary_branch_top_n": 2,
+        "primary_branch_any_of": [
+          "compressible-steady-startup-too-brittle"
+        ],
+        "required_nodes_in_top_n": {
+          "top_n": 3,
+          "ids": [
+            "compressible-steady-startup-too-brittle"
+          ]
+        },
+        "avoid_nodes_in_top_n": {
+          "top_n": 2,
+          "ids": [
+            "steady-state-divergence-overaggressive-numerics"
+          ]
+        }
+      }
+    },
+    {
+      "id": "a3-compressible-local-hotspot",
+      "suite": "core",
+      "matrix_ref": "A3",
+      "title": "Compressible local hotspot hidden by globally passable mesh",
+      "scenario_id": "compressible-thermo-flow-generic",
+      "playbook_id": "mesh-quality-repair-v1",
+      "focus": "mesh-hotspot",
+      "tags": [
+        "compressible",
+        "mesh",
+        "hotspot"
+      ],
+      "expectations": {
+        "primary_branch_top_n": 2,
+        "primary_branch_any_of": [
+          "critical-region-local-mesh-hotspot"
+        ],
+        "required_nodes_in_top_n": {
+          "top_n": 3,
+          "ids": [
+            "critical-region-local-mesh-hotspot",
+            "mesh-quality-driven-instability"
+          ]
+        },
+        "avoid_nodes_in_top_n": {
+          "top_n": 2,
+          "ids": [
+            "steady-state-divergence-overaggressive-numerics"
+          ]
+        }
+      }
+    },
+    {
+      "id": "b1-multiphase-interface-initialization",
+      "suite": "core",
+      "matrix_ref": "B1",
+      "title": "Multiphase wrong interface topology or phase initialization",
+      "scenario_id": "multiphase-interface-flow-generic",
+      "playbook_id": "first-pass-case-setup-checklist",
+      "focus": "interface-initialization",
+      "tags": [
+        "multiphase",
+        "setup",
+        "interface"
+      ],
+      "expectations": {
+        "primary_branch_top_n": 2,
+        "primary_branch_any_of": [
+          "multiphase-interface-initialization-mismatch",
+          "p-vs-p_rgh-confusion"
+        ],
+        "required_nodes_in_top_n": {
+          "top_n": 3,
+          "ids": [
+            "multiphase-interface-initialization-mismatch",
+            "p-vs-p_rgh-confusion"
+          ]
+        },
+        "avoid_nodes_in_top_n": {
+          "top_n": 2,
+          "ids": [
+            "courant-driven-transient-instability"
+          ]
+        }
+      }
+    },
+    {
+      "id": "b2-multiphase-interface-hotspot",
+      "suite": "core",
+      "matrix_ref": "B2",
+      "title": "Multiphase interface-region local mesh fragility",
+      "scenario_id": "multiphase-interface-flow-generic",
+      "playbook_id": "mesh-quality-repair-v1",
+      "focus": "mesh-hotspot",
+      "tags": [
+        "multiphase",
+        "mesh",
+        "hotspot"
+      ],
+      "expectations": {
+        "primary_branch_top_n": 2,
+        "primary_branch_any_of": [
+          "critical-region-local-mesh-hotspot"
+        ],
+        "required_nodes_in_top_n": {
+          "top_n": 3,
+          "ids": [
+            "critical-region-local-mesh-hotspot",
+            "mesh-quality-driven-instability"
+          ]
+        },
+        "avoid_nodes_in_top_n": {
+          "top_n": 2,
+          "ids": [
+            "courant-driven-transient-instability"
+          ]
+        }
+      }
+    },
+    {
+      "id": "b3-multiphase-parallel-only-failure",
+      "suite": "core",
+      "matrix_ref": "B3",
+      "title": "Multiphase serial-clean and parallel-bad interface failure",
+      "scenario_id": "multiphase-interface-flow-generic",
+      "playbook_id": "divergence-recovery-v1",
+      "focus": "parallel-sensitive",
+      "tags": [
+        "multiphase",
+        "parallel",
+        "interface"
+      ],
+      "expectations": {
+        "primary_branch_top_n": 2,
+        "primary_branch_any_of": [
+          "parallel-only-failure",
+          "processor-boundary-field-inconsistency",
+          "decomposition-fragmented-hotspot-vs-interface-semantic-defect"
+        ],
+        "required_nodes_in_top_n": {
+          "top_n": 4,
+          "ids": [
+            "parallel-only-failure",
+            "processor-boundary-field-inconsistency",
+            "decomposition-fragmented-hotspot-vs-interface-semantic-defect"
+          ]
+        },
+        "avoid_nodes_in_top_n": {
+          "top_n": 3,
+          "ids": [
+            "courant-driven-transient-instability"
+          ]
+        }
+      }
+    },
+    {
+      "id": "c1-reacting-structure-mismatch",
+      "suite": "core",
+      "matrix_ref": "C1",
+      "title": "Reacting solver, thermo, and chemistry structure mismatch",
+      "scenario_id": "reacting-combustion-flow-generic",
+      "playbook_id": "first-pass-case-setup-checklist",
+      "focus": "structural-setup",
+      "tags": [
+        "reacting",
+        "setup",
+        "structural"
+      ],
+      "expectations": {
+        "primary_branch_top_n": 2,
+        "primary_branch_any_of": [
+          "wrong-solver-family-selection",
+          "thermo-chemistry-package-inconsistency"
+        ],
+        "required_nodes_in_top_n": {
+          "top_n": 3,
+          "ids": [
+            "wrong-solver-family-selection",
+            "thermo-chemistry-package-inconsistency"
+          ]
+        },
+        "avoid_nodes_in_top_n": {
+          "top_n": 2,
+          "ids": [
+            "reacting-startup-coupling-too-stiff"
+          ]
+        }
+      }
+    },
+    {
+      "id": "c2-reacting-startup-stiffness",
+      "suite": "core",
+      "matrix_ref": "C2",
+      "title": "Reacting startup coupling too stiff",
+      "scenario_id": "reacting-combustion-flow-generic",
+      "playbook_id": "divergence-recovery-v1",
+      "focus": "startup-stiffness",
+      "tags": [
+        "reacting",
+        "startup",
+        "stiffness"
+      ],
+      "expectations": {
+        "primary_branch_top_n": 2,
+        "primary_branch_any_of": [
+          "reacting-startup-coupling-too-stiff"
+        ],
+        "required_nodes_in_top_n": {
+          "top_n": 3,
+          "ids": [
+            "reacting-startup-coupling-too-stiff"
+          ]
+        },
+        "avoid_nodes_in_top_n": {
+          "top_n": 2,
+          "ids": [
+            "steady-state-divergence-overaggressive-numerics"
+          ]
+        }
+      }
+    },
+    {
+      "id": "c3-reacting-local-hotspot",
+      "suite": "core",
+      "matrix_ref": "C3",
+      "title": "Reacting hotspot-driven instability",
+      "scenario_id": "reacting-combustion-flow-generic",
+      "playbook_id": "mesh-quality-repair-v1",
+      "focus": "mesh-hotspot",
+      "tags": [
+        "reacting",
+        "mesh",
+        "hotspot"
+      ],
+      "expectations": {
+        "primary_branch_top_n": 2,
+        "primary_branch_any_of": [
+          "critical-region-local-mesh-hotspot"
+        ],
+        "required_nodes_in_top_n": {
+          "top_n": 3,
+          "ids": [
+            "critical-region-local-mesh-hotspot",
+            "mesh-quality-driven-instability"
+          ]
+        },
+        "avoid_nodes_in_top_n": {
+          "top_n": 2,
+          "ids": [
+            "reacting-startup-coupling-too-stiff"
+          ]
+        }
+      }
+    }
+  ]
+}

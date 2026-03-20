@@ -1,59 +1,47 @@
 # AGENT_ENTRY.md
 
-This project is an agent-oriented OpenFOAM knowledge base.
+This is the hand-authored wrapper for agents entering the runtime surface for setup and case-review work.
 
-## Mission
-Use this repository to help an agent:
-- choose suitable solver families
-- set up OpenFOAM cases correctly
-- review dictionaries and case structure
-- diagnose divergence, crashes, and nonphysical results
-- separate official rules from community heuristics
+## Runtime source of truth
 
-## Reading order for agents
+Use `runtime/generated/agent-entry.md` as the current generated runtime view for entry behavior.
 
-### For case setup tasks
-1. `README.md`
-2. `playbooks/case-setup/README.md`
-3. `ontology/solver-maps/README.md`
-4. Relevant topic under `knowledge/official/`
-5. Relevant scenario under `scenario_templates/`
+Treat these runtime files as the canonical spine behind that generated view:
+- `runtime/contract.json`
+- `runtime/surface.json`
+- `runtime/catalog/*.json`
 
-### For troubleshooting tasks
-1. if a case path is available, run the first-pass auto-intake workflow from `CASE_AUTO_INTAKE_SPEC.md`
-2. read `TROUBLESHOOTING_ENTRY.md`
-3. identify the closest file under `scenario_templates/`
-4. read `playbooks/debug-routing/scenario-to-node-routing-v1.md`
-5. if the symptom is parallel-sensitive, read `PARALLEL_TRIAGE_DECISION_TREE.md`
-6. select the best matching playbook
-7. read `playbooks/debug-routing/playbook-to-node-routing-v1.md`
-8. load the top matching troubleshooting nodes under `ontology/troubleshooting-graph/nodes/`
-9. then consult `knowledge/community/` and `knowledge/official/` as evidence layers
+This file stays task-facing. It should not become a second routing map.
 
-### For source collection / maintenance tasks
-1. `references/collection-policy.md`
-2. `references/trust-ranking.md`
-3. `schemas/source-record.schema.yaml`
-4. `references/source-index.yaml`
+## Runtime boundary
+
+- Default to runtime entry surfaces, generated views, and authored runtime content under `playbooks/`, `scenario_templates/`, `ontology/`, `knowledge/`, and `prompts/`.
+- Do not treat `.sisyphus/`, stage-gate docs, progress logs, or validation reports as default runtime dependencies.
+- Use project-state material only when the user is explicitly asking about repository status, migration, or validation history.
+
+## How to use this surface
+
+### Setup tasks
+1. Read `runtime/generated/agent-entry.md`.
+2. Follow its case-setup lane and `runtime/generated/retrieval-order.md`.
+3. Match the closest scenario template.
+4. Start from `playbooks/case-setup/first-pass-case-setup-checklist.md`.
+5. Use `prompts/setup-assistant.md` to shape the answer.
+
+### Case-review tasks
+1. Read `runtime/generated/agent-entry.md`.
+2. Follow its case-review lane and `runtime/generated/retrieval-order.md`.
+3. Match the closest scenario template before widening into playbooks or nodes.
+4. Use `prompts/case-review.md` to keep the review structural and risk-aware.
+
+### Troubleshooting handoff
+
+If the task is already about failure diagnosis, switch to `runtime/generated/troubleshooting-entry.md` and then continue with `TROUBLESHOOTING_ENTRY.md` for classifier-specific guidance.
 
 ## Hard rules
-- Prefer official OpenFOAM documentation over community advice when they conflict.
-- Treat community posts as heuristics unless corroborated.
-- Always preserve source traceability for important claims.
-- Do not present low-confidence community tips as canonical truth.
-- When debugging, produce a prioritized check order instead of a flat list.
-- When setting up a case, explain solver / model / BC choices with assumptions.
 
-## Repository map
-- `knowledge/official/` — curated official knowledge by topic
-- `knowledge/tutorials/` — reusable patterns extracted from official tutorials
-- `knowledge/community/` — curated troubleshooting notes from high-value community sources
-- `knowledge/distilled/` — distilled reusable rules and failure patterns
-- `ontology/` — compact maps for solver choice, error classes, and troubleshooting traversal
-- `playbooks/` — operational setup and debugging workflows
-- `scenario_templates/` — scenario-oriented templates and patterns
-- `schemas/` — strict storage formats for knowledge items
-- `references/` — registry, trust policy, and citation management
-
-## Current project state
-The current troubleshooting-foundation pass is complete. The project already contains official backbone notes, scenario templates, troubleshooting nodes, routing docs, top-level troubleshooting entry points, prompt-layer behavior aligned with the routing workflow, and a first-pass path-driven case auto-intake layer. Agents should use scenario -> playbook -> node routing before broad source search.
+- Keep scenario -> playbook -> node order before broad source search.
+- Prefer official OpenFOAM guidance over community heuristics when they conflict.
+- Preserve source traceability for important claims.
+- Explain solver, model, and BC assumptions when setup choices are not unique.
+- Do not let project-state documents become default runtime dependencies.

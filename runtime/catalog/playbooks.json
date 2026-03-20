@@ -1,0 +1,56 @@
+{
+  "catalog_version": 1,
+  "catalog_kind": "playbooks",
+  "path_style": "repository-relative",
+  "items": [
+    {
+      "id": "first-pass-case-setup-checklist",
+      "aliases": [],
+      "path": "playbooks/case-setup/first-pass-case-setup-checklist.md",
+      "status": "active",
+      "kind": "playbook"
+    },
+    {
+      "id": "boundary-condition-design-v1",
+      "aliases": [],
+      "path": "playbooks/boundary-condition-design/boundary-condition-design-v1.md",
+      "status": "active",
+      "kind": "playbook"
+    },
+    {
+      "id": "divergence-recovery-v1",
+      "aliases": [],
+      "path": "playbooks/divergence-recovery/divergence-recovery-v1.md",
+      "status": "active",
+      "kind": "playbook"
+    },
+    {
+      "id": "mesh-quality-repair-v1",
+      "aliases": [],
+      "path": "playbooks/mesh-quality-repair/mesh-quality-repair-v1.md",
+      "status": "active",
+      "kind": "playbook"
+    },
+    {
+      "id": "residual-diagnosis-v1",
+      "aliases": [],
+      "path": "playbooks/residual-diagnosis/residual-diagnosis-v1.md",
+      "status": "active",
+      "kind": "playbook"
+    },
+    {
+      "id": "scenario-to-node-routing-v1",
+      "aliases": [],
+      "path": "playbooks/debug-routing/scenario-to-node-routing-v1.md",
+      "status": "active",
+      "kind": "playbook"
+    },
+    {
+      "id": "playbook-to-node-routing-v1",
+      "aliases": [],
+      "path": "playbooks/debug-routing/playbook-to-node-routing-v1.md",
+      "status": "active",
+      "kind": "playbook"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "manifest_version": 1,
+  "bundle_name": "openfoam-copilot-runtime",
+  "consumer_model": "local-files-first",
+  "output_manifest": "bundle-manifest.json",
+  "primary_entrypoints": [
+    "README.md",
+    "runtime/contract.json",
+    "runtime/generated/skill-bridge.md",
+    "runtime/generated/agent-entry.md",
+    "runtime/generated/troubleshooting-entry.md",
+    "runtime/generated/retrieval-order.md",
+    "AGENT_ENTRY.md",
+    "TROUBLESHOOTING_ENTRY.md",
+    "CASE_AUTO_INTAKE_SPEC.md",
+    "CASE_TRIAGE_PLAYBOOK.md",
+    "references/retrieval-order.md",
+    "skills/openfoam-copilot/SKILL.md"
+  ],
+  "surface_classes_to_copy": [
+    "runtime_public"
+  ],
+  "runtime_support": {
+    "exact_paths": [
+      "runtime/contract.json",
+      "runtime/surface.json",
+      "runtime/bundle-manifest.json",
+      "runtime/README.md",
+      "references/source-index.yaml",
+      "references/citation-map.yaml",
+      "references/collection-policy.md",
+      "references/traceability-rules.md",
+      "references/trust-ranking.md",
+      "scripts/case_auto_intake.py"
+    ],
+    "globs": [
+      "runtime/catalog/*.json",
+      "runtime/generated/*.md"
+    ]
+  },
+  "exclude_globs": [
+    "**/AGENTS.md",
+    "skills/*.skill"
+  ],
+  "notes": [
+    "The exported bundle keeps repository-relative paths intact so generated views and skill templates continue to work after a local path replacement.",
+    "Project-state documents stay out of the exported bundle even if they exist in the source repository.",
+    "Deprecated compatibility files may remain in the source repository, but they are not primary bundle entrypoints."
+  ]
+}

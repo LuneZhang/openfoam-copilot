@@ -1,36 +1,34 @@
 # Retrieval Order
 
-## Goal
-Define a deterministic retrieval order so agents do not wander randomly through the repository.
+## Purpose
 
-## A. Case setup tasks
-1. Identify the closest `scenario_templates/` file.
-2. Read that template’s `recommended_playbooks`.
-3. Load `playbooks/case-setup/first-pass-case-setup-checklist.md` unless a more specific playbook is clearly dominant.
-4. Pull the minimum required official notes from `knowledge/official/`.
-5. Use troubleshooting nodes only if the setup already shows a concrete failure branch.
+Use this file as the human wrapper around the generated retrieval order. The runtime routing truth lives in `runtime/generated/retrieval-order.md`, with boundaries defined by `runtime/contract.json` and `runtime/surface.json`.
 
-## B. Troubleshooting tasks
-1. Identify the closest `scenario_templates/` file.
-2. Read `playbooks/debug-routing/scenario-to-node-routing-v1.md`.
-3. Select the best matching playbook.
-4. Read `playbooks/debug-routing/playbook-to-node-routing-v1.md`.
-5. Load the top 1–3 troubleshooting nodes from `ontology/troubleshooting-graph/nodes/`.
-6. Use `knowledge/official/` as the primary evidence layer.
-7. Use `knowledge/community/` only as bounded heuristic support.
+## Default runtime use
 
-## C. Case-review tasks
-1. Identify the closest `scenario_templates/` file.
-2. Use `prompts/case-review.md` as the review frame.
-3. Pull the setup checklist.
-4. Pull the most relevant official notes.
-5. Pull troubleshooting nodes only for clearly visible red-flag branches.
+- Start from `runtime/generated/retrieval-order.md`.
+- Treat `runtime_public` as the default surface.
+- Pull `runtime_support` only when the generated order or task requires contract, helper, source-registry, or skill-bridge detail.
+- Do not pull `authoring_only` or `project_state` by default.
 
-## D. Source-ingestion tasks
-1. Use `prompts/source-triage-assistant.md`.
-2. Check `references/collection-policy.md`.
-3. Record the source in `references/source-index.yaml`.
-4. Only then create community source records or distilled notes.
+## Task-shaped application
 
-## Hard rule
-Do not start from community notes when official guidance already covers the semantics or structure in question.
+### Setup, troubleshooting, and case-review
+
+Follow the task lane in `runtime/generated/retrieval-order.md` or `runtime/generated/agent-entry.md`. This file does not override those generated paths.
+
+### Source triage and traceability
+
+Use this order when the task is about collecting, registering, or auditing sources:
+1. `prompts/source-triage-assistant.md`
+2. `references/collection-policy.md`
+3. `runtime/catalog/sources.json`
+4. `references/source-index.yaml`
+5. `references/citation-map.yaml`
+6. `references/traceability-rules.md`
+
+## Hard rules
+
+- Do not start from community notes when official guidance already covers the semantics or structure in question.
+- Treat `runtime/catalog/sources.json` as the canonical source-registry summary and `references/` as the backing traceability layer.
+- Keep project-state and validation documents out of default runtime retrieval unless the question is explicitly about repository status.

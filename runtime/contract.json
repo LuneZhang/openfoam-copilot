@@ -1,0 +1,80 @@
+{
+  "consumer_model": "local-files-first",
+  "runtime_entrypoints": [
+    "README.md",
+    "AGENT_ENTRY.md",
+    "TROUBLESHOOTING_ENTRY.md",
+    "CASE_AUTO_INTAKE_SPEC.md",
+    "CASE_TRIAGE_PLAYBOOK.md",
+    "references/retrieval-order.md",
+    "skills/openfoam-copilot/SKILL.md"
+  ],
+  "optional_helpers": [
+    "scripts/case_auto_intake.py"
+  ],
+  "fallback_behavior": {
+    "default_mode": "Read repository-local Markdown entrypoints first and follow their ordered routing into authored content.",
+    "when_optional_helpers_are_unavailable": [
+      "Do not assume Python, package managers, network access, or a service process.",
+      "If a local case path is available, collect the minimum manual case snapshot described in CASE_AUTO_INTAKE_SPEC.md.",
+      "Continue with CASE_TRIAGE_PLAYBOOK.md and TROUBLESHOOTING_ENTRY.md.",
+      "If required runtime entrypoints are missing, stop and report the repository as incomplete for portable runtime use."
+    ],
+    "minimum_manual_inputs": [
+      "case path",
+      "optional log path",
+      "optional short failure description",
+      "optional serial-vs-parallel hint"
+    ]
+  },
+  "compatibility_policy": {
+    "contract_intent": "This contract defines portable file-based repository consumption for external coding agents.",
+    "guarantees": [
+      "Human-authored Markdown remains the primary runtime knowledge surface.",
+      "The repository stays usable even when optional helpers cannot run.",
+      "Future generated runtime views may be added, but they must preserve or clearly bridge the current entry behavior before older entrypaths are retired."
+    ],
+    "change_rules": [
+      "Avoid breaking existing runtime entrypoint paths without compatibility coverage.",
+      "Keep helper execution optional and additive.",
+      "Do not redefine the contract as a network API, package-managed dependency, or long-running service."
+    ]
+  },
+  "runtime_surface_policy": {
+    "default_runtime_dependencies": [
+      "README.md",
+      "AGENT_ENTRY.md",
+      "TROUBLESHOOTING_ENTRY.md",
+      "CASE_AUTO_INTAKE_SPEC.md",
+      "CASE_TRIAGE_PLAYBOOK.md",
+      "references/retrieval-order.md",
+      "skills/openfoam-copilot/SKILL.md",
+      "playbooks/",
+      "scenario_templates/",
+      "ontology/",
+      "knowledge/official/",
+      "knowledge/tutorials/",
+      "knowledge/community/",
+      "knowledge/distilled/",
+      "prompts/"
+    ],
+    "default_usage_rule": "Start from the listed entrypoints, then follow repository reading order into authored Markdown and routing artifacts.",
+    "excluded_from_default_runtime_dependencies": [
+      ".sisyphus/",
+      "MASTER_PLAN.md",
+      "DETAILED_DESIGN_V2.md",
+      "NEXT_STAGE_STARTUP_CHECKLIST.md",
+      "PHASE1_BACKLOG.md",
+      "PHASE1_PROGRESS.md",
+      "PHASE1_STAGE_GATE.md",
+      "PHASE2_BRANCH_CLOSURE_PLAN.md",
+      "SCENARIO_EXPANSION_PROGRESS.md",
+      "SCENARIO_EXPANSION_STAGE_GATE.md",
+      "VALIDATION_CASE_MATRIX.md",
+      "VALIDATION_RESULTS.md",
+      "VALIDATION_STAGE_GATE.md",
+      "VALIDATION_WORKFLOW.md"
+    ],
+    "exclusion_rule": "Project-state, planning, progress, and validation-status documents are outside the default runtime dependency surface."
+  }
+}
